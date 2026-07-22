@@ -34,6 +34,15 @@
 <span class="eyebrow">Ti gratis kalkulatorer</span>
 <h1>Se hva <em>regninga</em> faktisk blir.</h1>
 <p>Regn på alt fra bolig og bil til strøm, samboerøkonomi, hund og barn. Juster tallene selv og få ett tydelig svar med én gang.</p>
+<form class="home-search" id="homeSearchForm" role="search">
+<label class="sr-only" for="homeSearchInput">Søk etter kalkulator</label>
+<div class="home-search-box">
+<input id="homeSearchInput" type="search" autocomplete="off" placeholder="Hva vil du regne på?" aria-describedby="homeSearchHint">
+<button type="submit">Søk <span aria-hidden="true">→</span></button>
+</div>
+<p id="homeSearchHint" class="home-search-hint">Prøv for eksempel «boliglån», «jobbe 80 %», «strøm» eller «hund».</p>
+<div id="homeSearchResults" class="home-search-results" aria-live="polite"></div>
+</form>
 <div class="hero-actions">
 <a class="btn btn-primary" href="#kalkulatorer">Velg kalkulator →</a>
 <a class="btn btn-secondary" href="pensjon/">Sjekk pensjon</a>
@@ -81,5 +90,5 @@
 <footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> Regninga</span><span>Anslagene er veiledende og erstatter ikke personlig økonomisk rådgivning.</span><a href="personvern.html">Personvern</a></div></footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="assets/ads.js"></script>
-<script defer="" src="assets/site.js"></script></body>
+<script defer="" src="assets/site.js"></script><script defer src="assets/home-search.js"></script></body>
 </html>

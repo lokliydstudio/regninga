@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Spør Banken om privatøkonomi og finn riktig kalkulator på Regninga.">
+<meta name="description" content="Søk blant kalkulatorene på Regninga og finn riktig verktøy med én gang.">
 <meta name="theme-color" content="#090d18">
 <link rel="canonical" href="https://regninga.no/banken/">
 <title>Banken – økonomisøk på Regninga</title>
@@ -27,15 +27,15 @@
       <div class="bank-clean-brand" aria-hidden="true"><span>kr</span></div>
       <span class="eyebrow">Økonomisøk på Regninga</span>
       <h1>Hva vil du finne ut?</h1>
-      <p>Spør om privatøkonomi. Banken finner riktig kalkulator og sender deg rett videre.</p>
+      <p>Skriv hva du vil regne på. Banken søker lokalt på Regninga og finner riktig kalkulator.</p>
 
       <div class="bank-search-card">
         <form id="bankForm" class="bank-search-form">
           <label class="sr-only" for="bankQuery">Skriv et økonomisk spørsmål</label>
-          <textarea id="bankQuery" rows="1" maxlength="300" placeholder="For eksempel: Har jeg råd til å jobbe 80 prosent?" required></textarea>
+          <textarea id="bankQuery" rows="1" maxlength="300" placeholder="For eksempel: kostnad ved å jobbe 80 prosent" required></textarea>
           <button class="bank-search-button" type="submit" aria-label="Spør Banken">→</button>
         </form>
-        <div class="bank-search-meta"><span><i></i> Kun økonomi</span><button id="bankClear" type="button">Nullstill</button></div>
+        <div class="bank-search-meta"><span><i></i> Lokalt søk</span><button id="bankClear" type="button">Nullstill</button></div>
       </div>
 
       <div class="bank-suggestions" aria-label="Forslag til spørsmål">
@@ -52,15 +52,15 @@
       <div id="bankMessages" class="bank-messages" aria-live="polite">
         <div class="bank-message bank-message-bot">
           <div class="bank-avatar">B</div>
-          <div><strong>Banken</strong><p>Still et spørsmål, så finner jeg den mest relevante kalkulatoren.</p></div>
+          <div><strong>Banken</strong><p>Skriv hva du leter etter, så finner Banken den mest relevante kalkulatoren.</p></div>
         </div>
       </div>
       <div id="bankResults" class="bank-results" aria-label="Relevante kalkulatorer"></div>
-      <p class="bank-disclaimer">Svarene er veiledende og er ikke personlig økonomisk rådgivning.</p>
+      <p class="bank-disclaimer">Søket skjer lokalt i nettleseren og sender ingen spørsmål til eksterne tjenester.</p>
     </div>
   </section>
 </main>
 <footer class="footer"><div class="container footer-inner"><span>© <span data-current-year></span> Regninga</span><span>Anslagene er veiledende.</span><a href="../personvern.html">Personvern</a></div></footer>
-<script src="../assets/ads.js"></script><script defer src="../assets/site.js"></script><script src="../assets/banken-config.js"></script><script defer src="../assets/banken.js"></script>
+<script src="../assets/ads.js"></script><script defer src="../assets/site.js"></script><script defer src="../assets/banken.js"></script>
 </body>
 </html>

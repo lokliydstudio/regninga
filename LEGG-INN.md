@@ -1,48 +1,27 @@
-# Gjør Banken til ekte KI
+# Banken – lokal søkemotor
 
-## 1. Kopier nettsidefilene
-Kopier `banken/` og `assets/` til roten av Regninga-prosjektet. Godta overskriving.
+Denne oppdateringen fjerner KI-funksjonen helt og gjør Banken til et lokalt søk på Regninga.
 
-## 2. Opprett OpenAI API-nøkkel
-Opprett en prosjektbasert API-nøkkel i OpenAI-plattformen. Ikke legg nøkkelen i GitHub eller i JavaScript på nettsiden.
+## Slik installerer du
 
-## 3. Publiser Cloudflare Worker
-Installer Node.js, åpne terminalen i `cloudflare-worker/`, og kjør:
+1. Pakk ut ZIP-filen.
+2. Kopier alle filene og mappene til roten av GitHub-prosjektet for regninga.no.
+3. Godta overskriving av eksisterende filer.
+4. Commit og push endringene til GitHub Pages.
 
-```bash
-npm install
-npx wrangler login
-npx wrangler secret put OPENAI_API_KEY
-npm run deploy
-```
+## Dette er endret
 
-Lim inn OpenAI-nøkkelen når Wrangler spør. Etter deploy får du en adresse som ligner:
+- OpenAI- og Cloudflare-koblingen er fjernet.
+- `banken-config.js` brukes ikke lenger.
+- Banken søker kun i en lokal liste over kalkulatorene.
+- Forsiden har fått en søkeboks.
+- Ved et tydelig treff sendes brukeren rett til kalkulatoren.
+- Ved flere mulige treff åpnes Banken med en kort resultatliste.
+- Ingen søketekst sendes til eksterne tjenester.
 
-```text
-https://regninga-banken.ditt-navn.workers.dev
-```
+Du kan slette gamle KI-filer fra prosjektet dersom de finnes:
 
-## 4. Koble nettsiden til Worker-adressen
-Åpne `assets/banken-config.js` og erstatt:
+- `assets/banken-config.js`
+- eventuell mappe med Cloudflare Worker-kode
 
-```js
-https://DIN-WORKER.workers.dev/api/banken
-```
-
-med Worker-adressen din pluss `/api/banken`, for eksempel:
-
-```js
-https://regninga-banken.ditt-navn.workers.dev/api/banken
-```
-
-Last deretter filene opp til GitHub Pages.
-
-## Slik fungerer løsningen
-- GitHub Pages viser søkesiden.
-- Cloudflare Worker oppbevarer API-nøkkelen sikkert som en secret.
-- Banken sender bare økonomiske spørsmål til OpenAI Responses API.
-- Ikke-økonomiske spørsmål avvises.
-- Lokal søkefunksjon peker fortsatt til relevante kalkulatorer dersom KI-tjenesten er nede.
-
-## Kostnadskontroll
-Sett et månedlig budsjett og bruksvarsler i OpenAI-kontoen. Worker-koden begrenser spørsmål til 500 tegn og svar til 500 output-tokens.
+API-nøkkelen bør også slettes eller deaktiveres i OpenAI dersom den ikke skal brukes andre steder.
