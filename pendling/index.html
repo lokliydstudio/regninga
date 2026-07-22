@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="nb">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Sammenlign kostnaden ved å pendle med bil og kollektivtransport." name="description"/>
+<title>Hva koster pendlingen? – Regninga</title>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="../assets/styles.css" rel="stylesheet"/>
+<script src="../assets/ads-config.js"></script><meta content="#090d18" name="theme-color"/><link href="https://regninga.no/pendling/" rel="canonical"/><script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8834902676708293"></script>
+<meta content="dark" name="color-scheme"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="Hva koster pendlingen? – Regninga" property="og:title"/><meta content="Sammenlign kostnaden ved å pendle med bil og kollektivtransport." property="og:description"/><meta content="website" property="og:type"/><meta content="https://regninga.no/pendling/" property="og:url"/><meta content="summary" name="twitter:card"/></head>
+<body data-calculator="pendling">
+<a class="skip-link" href="#innhold">Hopp til innhold</a>
+<header class="site-header">
+<div class="container header-inner">
+<a aria-label="Regninga – forsiden" class="logo" href="../"><span aria-hidden="true" class="logo-mark">R</span><span>Regninga</span></a>
+<button aria-controls="main-nav" aria-expanded="false" class="nav-toggle" type="button"><span class="sr-only">Åpne meny</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+<nav aria-label="Hovedmeny" class="nav" id="main-nav"><a href="../bolig/">Bolig</a><a href="../bil/">Bil</a><a aria-current="page" href="../pendling/">Pendling</a><a href="../strom/">Strøm</a><a href="../samboer/">Samboer</a><a href="../hund/">Hund</a><a href="../barn/">Barn</a><a href="../pensjon/">Pensjon</a></nav>
+</div>
+</header>
+<main id="innhold">
+<section class="page-intro"><div class="container"><span class="eyebrow">Pendlingskalkulator</span><h1>Hva koster jobbreisen?</h1><p>Sammenlign bil og kollektivt med dine egne reisedager, kostnader og reisetid.</p></div></section><section aria-label="Annonseplass" class="container ad-section" hidden=""><div aria-label="Annonse" class="ad-slot" data-ad-placement="top"><span class="ad-label">Annonse</span></div></section>
+<div class="container calculator-shell">
+<form class="form-card" data-calculator-form="">
+<h2>Reisemønster</h2><p class="form-lead">Kalkulatoren regner tur-retur for hver kontordag.</p>
+<fieldset class="form-section"><legend>Hvor ofte reiser du?</legend><div class="field-grid">
+<div class="field"><label for="distance">Avstand én vei</label><div class="input-wrap"><input id="distance" min="0" step="1" type="number" value="22"/><span class="input-suffix">km</span></div></div>
+<div class="field"><label for="days">Kontordager per uke</label><div class="input-wrap"><input id="days" max="7" min="0" step="1" type="number" value="4"/><span class="input-suffix">dager</span></div></div>
+<div class="field full"><label for="weeks">Arbeidsuker med pendling per år</label><div class="input-wrap"><input id="weeks" max="52" min="0" step="1" type="number" value="46"/><span class="input-suffix">uker</span></div></div>
+</div></fieldset>
+<fieldset class="form-section"><legend>Bil</legend><div class="field-grid">
+<div class="field"><label for="energyPerKm">Energi/drivstoff per km</label><div class="input-wrap"><input id="energyPerKm" min="0" step="0.05" type="number" value="0.55"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="wearPerKm">Slitasje og verditap per km</label><div class="input-wrap"><input id="wearPerKm" min="0" step="0.1" type="number" value="2.5"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="toll">Bom tur-retur per dag</label><div class="input-wrap"><input id="toll" min="0" step="10" type="number" value="70"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="parking">Parkering per dag</label><div class="input-wrap"><input id="parking" min="0" step="10" type="number" value="120"/><span class="input-suffix">kr</span></div></div>
+<div class="field full"><label for="carTime">Reisetid én vei med bil</label><div class="input-wrap"><input id="carTime" min="0" step="5" type="number" value="35"/><span class="input-suffix">min</span></div></div>
+</div></fieldset>
+<fieldset class="form-section"><legend>Kollektivt</legend><div class="field-grid">
+<div class="field"><label for="transitMonthly">Månedskort</label><div class="input-wrap"><input id="transitMonthly" min="0" step="50" type="number" value="950"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="transitMonths">Antall måneder kjøpt per år</label><div class="input-wrap"><input id="transitMonths" max="12" min="0" step="1" type="number" value="11"/><span class="input-suffix">mnd</span></div></div>
+<div class="field full"><label for="transitTime">Reisetid én vei kollektivt</label><div class="input-wrap"><input id="transitTime" min="0" step="5" type="number" value="55"/><span class="input-suffix">min</span></div></div>
+</div></fieldset>
+</form>
+<aside><section aria-live="polite" class="result-card"><h2>Billigste alternativ</h2><p class="result-lead">Gjennomsnitt per måned, fordelt over hele året.</p><div class="result-main"><div class="label">Laveste månedskostnad</div><div class="value" id="main-result">–</div><div class="sub" id="result-year">–</div></div>
+<div class="compare-grid"><div class="compare-box"><span>Bil per måned</span><strong id="car-result">–</strong></div><div class="compare-box"><span>Kollektivt per måned</span><strong id="transit-result">–</strong></div></div>
+<dl class="result-list"><div class="result-row"><dt>Forskjell</dt><dd id="difference-result">–</dd></div><div class="result-row"><dt>Kjørelengde ved bil</dt><dd id="distance-result">–</dd></div><div class="result-row"><dt>Tid i bil per år</dt><dd id="car-time-result">–</dd></div><div class="result-row"><dt>Tid kollektivt per år</dt><dd id="transit-time-result">–</dd></div></dl>
+<div class="result-actions"><button class="btn btn-primary" data-copy="" type="button">Kopier resultat</button><button class="btn btn-secondary" data-reset="" type="button">Nullstill</button></div><div class="notice">Bilberegningen inkluderer bare kostnader knyttet til selve pendlingen. Faste kostnader som forsikring og billån bør vurderes separat.</div>
+</section><section aria-label="Annonseplass" class="ad-section ad-section-sidebar" hidden=""><div aria-label="Annonse" class="ad-slot" data-ad-placement="sidebar"><span class="ad-label">Annonse</span></div></section></aside>
+</div>
+</main>
+<footer class="footer">
+<div class="container footer-main">
+<div class="footer-brand"><a class="logo" href="../"><span aria-hidden="true" class="logo-mark">R</span><span>Regninga</span></a><p>Smarte kalkulatorer for norske hverdagsutgifter.</p></div>
+<div class="footer-links"><strong>Regninga</strong><a href="../">Alle kalkulatorer</a><a href="../personvern.html">Personvern</a><a href="../kontakt.html">Kontakt</a></div>
+<div class="footer-note"><strong>Viktig</strong><p>Beregningene er veiledende og erstatter ikke personlig økonomisk rådgivning.</p></div>
+</div>
+<div class="container footer-bottom"><span>© <span data-current-year="">2026</span> Regninga</span><span>regninga.no</span></div>
+</footer>
+<script src="../assets/app.js"></script>
+<script src="../assets/ads.js"></script><script defer src="../assets/site.js"></script></body></html>

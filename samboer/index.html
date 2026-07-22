@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="nb">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Fordel fellesutgifter mellom samboere med 50/50, etter inntekt eller slik at begge har omtrent like mye igjen." name="description"/>
+<title>Samboerkalkulator – Regninga</title>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/styles.css" rel="stylesheet"/>
+<script src="../assets/ads-config.js"></script>
+<meta content="#090d18" name="theme-color"/><link href="https://regninga.no/samboer/" rel="canonical"/><script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8834902676708293"></script>
+<meta content="dark" name="color-scheme"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="Samboerkalkulator – Regninga" property="og:title"/><meta content="Fordel fellesutgifter mellom samboere med 50/50, etter inntekt eller slik at begge har omtrent like mye igjen." property="og:description"/><meta content="website" property="og:type"/><meta content="https://regninga.no/samboer/" property="og:url"/><meta content="summary" name="twitter:card"/></head>
+<body data-calculator="samboer">
+<a class="skip-link" href="#innhold">Hopp til innhold</a>
+<header class="site-header">
+<div class="container header-inner">
+<a aria-label="Regninga – forsiden" class="logo" href="../"><span aria-hidden="true" class="logo-mark">R</span><span>Regninga</span></a>
+<button aria-controls="main-nav" aria-expanded="false" class="nav-toggle" type="button"><span class="sr-only">Åpne meny</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+<nav aria-label="Hovedmeny" class="nav" id="main-nav"><a href="../bolig/">Bolig</a><a href="../bil/">Bil</a><a href="../pendling/">Pendling</a><a href="../strom/">Strøm</a><a aria-current="page" href="../samboer/">Samboer</a><a href="../hund/">Hund</a><a href="../barn/">Barn</a><a href="../pensjon/">Pensjon</a></nav>
+</div>
+</header>
+<main id="innhold">
+<section class="page-intro">
+<div class="container">
+<span class="eyebrow">Samboerkalkulator</span>
+<h1>Hvordan bør vi dele utgiftene?</h1>
+<p>Sammenlign tre vanlige fordelingsmodeller og se både bidrag, prosentandel og hvor mye hver person sitter igjen med.</p>
+</div>
+</section>
+<section aria-label="Annonseplass" class="container ad-section" hidden="">
+<div aria-label="Annonse" class="ad-slot" data-ad-placement="top"><span class="ad-label">Annonse</span></div>
+</section>
+<div class="container calculator-shell">
+<form class="form-card" data-calculator-form="">
+<h2>Dine tall</h2>
+<p class="form-lead">Bruk netto inntekt etter skatt. Endringene beregnes med én gang.</p>
+<fieldset class="form-section">
+<legend>Inntekt og fordelingsmodell</legend>
+<div class="field-grid">
+<div class="field"><label for="incomeA">Nettoinntekt person A</label><div class="input-wrap"><input id="incomeA" min="0" step="500" type="number" value="38000"/><span class="input-suffix">kr/mnd.</span></div></div>
+<div class="field"><label for="incomeB">Nettoinntekt person B</label><div class="input-wrap"><input id="incomeB" min="0" step="500" type="number" value="29000"/><span class="input-suffix">kr/mnd.</span></div></div>
+<div class="field full"><label for="splitModel">Slik vil dere fordele</label><select id="splitModel"><option selected="" value="income">Etter nettoinntekt</option><option value="equal">50/50</option><option value="equal-left">Begge har omtrent like mye igjen</option></select><span class="field-help">Modellen «likt igjen» fordeler så langt det er mulig uten at noen får et negativt bidrag.</span></div>
+</div>
+</fieldset>
+<fieldset class="form-section">
+<legend>Fellesutgifter per måned</legend>
+<div class="field-grid">
+<div class="field"><label for="housing">Bolig og felleskostnader</label><div class="input-wrap"><input id="housing" min="0" step="500" type="number" value="17000"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="electricity">Strøm og nettleie</label><div class="input-wrap"><input id="electricity" min="0" step="100" type="number" value="1800"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="food">Mat og husholdning</label><div class="input-wrap"><input id="food" min="0" step="500" type="number" value="7000"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="insurance">Felles forsikringer</label><div class="input-wrap"><input id="insurance" min="0" step="100" type="number" value="900"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="subscriptions">Internett og abonnementer</label><div class="input-wrap"><input id="subscriptions" min="0" step="100" type="number" value="900"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="transport">Felles transport</label><div class="input-wrap"><input id="transport" min="0" step="100" type="number" value="1500"/><span class="input-suffix">kr</span></div></div>
+<div class="field full"><label for="other">Andre fellesutgifter</label><div class="input-wrap"><input id="other" min="0" step="100" type="number" value="1000"/><span class="input-suffix">kr</span></div></div>
+</div>
+</fieldset>
+</form>
+<aside>
+<section aria-live="polite" class="result-card">
+<h2>Forslag til fordeling</h2>
+<p class="result-lead">Et nøytralt regnestykke dere kan bruke som utgangspunkt for en samtale.</p>
+<div class="result-main"><div class="label">Fellesutgifter totalt</div><div class="value" id="main-result">–</div><div class="sub" id="result-year">–</div></div>
+<div class="partner-grid">
+<div class="partner-card"><span>Person A betaler</span><strong id="a-result">–</strong><small id="a-share-result">–</small></div>
+<div class="partner-card"><span>Person B betaler</span><strong id="b-result">–</strong><small id="b-share-result">–</small></div>
+</div>
+<dl class="result-list">
+<div class="result-row"><dt>Person A har igjen</dt><dd id="a-left-result">–</dd></div>
+<div class="result-row"><dt>Person B har igjen</dt><dd id="b-left-result">–</dd></div>
+<div class="result-row"><dt>Belastning person A</dt><dd id="a-burden-result">–</dd></div>
+<div class="result-row"><dt>Belastning person B</dt><dd id="b-burden-result">–</dd></div>
+</dl>
+<div class="result-actions"><button class="btn btn-primary" data-copy="" type="button">Kopier resultat</button><button class="btn btn-secondary" data-reset="" type="button">Nullstill</button></div>
+<div class="notice">Kalkulatoren avgjør ikke hva som er «rettferdig». Eierskap, gjeld, barn, formue og ulønnet arbeid kan også være relevante.</div>
+</section>
+<section aria-label="Annonseplass" class="ad-section ad-section-sidebar" hidden=""><div aria-label="Annonse" class="ad-slot" data-ad-placement="sidebar"><span class="ad-label">Annonse</span></div></section>
+</aside>
+</div>
+</main>
+<footer class="footer">
+<div class="container footer-main">
+<div class="footer-brand"><a class="logo" href="../"><span aria-hidden="true" class="logo-mark">R</span><span>Regninga</span></a><p>Smarte kalkulatorer for norske hverdagsutgifter.</p></div>
+<div class="footer-links"><strong>Regninga</strong><a href="../">Alle kalkulatorer</a><a href="../personvern.html">Personvern</a><a href="../kontakt.html">Kontakt</a></div>
+<div class="footer-note"><strong>Viktig</strong><p>Beregningene er veiledende og erstatter ikke personlig økonomisk rådgivning.</p></div>
+</div>
+<div class="container footer-bottom"><span>© <span data-current-year="">2026</span> Regninga</span><span>regninga.no</span></div>
+</footer>
+<script src="../assets/app.js"></script>
+<script src="../assets/ads.js"></script>
+<script defer src="../assets/site.js"></script></body>
+</html>

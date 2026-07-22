@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="nb">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Regn ut hva det koster å dusje, lade elbil, bruke hvitevarer og varme opp boligen med spotpris i ditt prisområde." name="description"/>
+<title>Strømkalkulator – Regninga</title>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/styles.css" rel="stylesheet"/>
+<script src="../assets/ads-config.js"></script>
+<meta content="#090d18" name="theme-color"/><link href="https://regninga.no/strom/" rel="canonical"/><script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8834902676708293"></script>
+<meta content="dark" name="color-scheme"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="Strømkalkulator – Regninga" property="og:title"/><meta content="Regn ut hva det koster å dusje, lade elbil, bruke hvitevarer og varme opp boligen med spotpris i ditt prisområde." property="og:description"/><meta content="website" property="og:type"/><meta content="https://regninga.no/strom/" property="og:url"/><meta content="summary" name="twitter:card"/></head>
+<body data-calculator="strom">
+<a class="skip-link" href="#innhold">Hopp til innhold</a>
+<header class="site-header">
+<div class="container header-inner">
+<a aria-label="Regninga – forsiden" class="logo" href="../"><span aria-hidden="true" class="logo-mark">R</span><span>Regninga</span></a>
+<button aria-controls="main-nav" aria-expanded="false" class="nav-toggle" type="button"><span class="sr-only">Åpne meny</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+<nav aria-label="Hovedmeny" class="nav" id="main-nav"><a href="../bolig/">Bolig</a><a href="../bil/">Bil</a><a href="../pendling/">Pendling</a><a aria-current="page" href="../strom/">Strøm</a><a href="../samboer/">Samboer</a><a href="../hund/">Hund</a><a href="../barn/">Barn</a><a href="../pensjon/">Pensjon</a></nav>
+</div>
+</header>
+<main id="innhold">
+<section class="page-intro">
+<div class="container">
+<span class="eyebrow">Strømkalkulator</span>
+<h1>Hva koster strømbruken?</h1>
+<p>Bruk spotprisen akkurat nå, dagens gjennomsnitt eller en pris du skriver inn selv. Regn på dusj, elbillading, hvitevarer og oppvarming.</p>
+</div>
+</section>
+<section aria-label="Annonseplass" class="container ad-section" hidden="">
+<div aria-label="Annonse" class="ad-slot" data-ad-placement="top"><span class="ad-label">Annonse</span></div>
+</section>
+<section aria-labelledby="spotHeading" class="container electricity-price-card">
+<div class="price-card-heading">
+<div><span class="eyebrow">Dagens strømpris</span><h2 id="spotHeading">Velg prisområdet ditt</h2><p>Spotprisen hentes fra det åpne API-et til <a href="https://www.hvakosterstrommen.no" rel="noopener" target="_blank">Hva koster strømmen?</a></p></div>
+<button class="btn btn-secondary" id="refreshPrice" type="button">↻ Oppdater</button>
+</div>
+<div class="price-controls">
+<div class="field"><label for="priceArea">Prisområde</label><select id="priceArea"><option value="NO1">NO1 – Øst-Norge</option><option value="NO2">NO2 – Sørvest-Norge</option><option value="NO3">NO3 – Midt-Norge</option><option value="NO4">NO4 – Nord-Norge</option><option value="NO5">NO5 – Vest-Norge</option></select></div>
+<div class="field"><label for="priceMode">Pris som brukes</label><select id="priceMode"><option value="current">Spotpris akkurat nå</option><option value="average">Dagens gjennomsnitt</option><option value="manual">Skriv inn egen spotpris</option></select></div>
+<div class="field" hidden="" id="manualPriceField"><label for="manualSpotPrice">Egen spotpris</label><div class="input-wrap"><input id="manualSpotPrice" min="-10" step="0.01" type="number" value="1.00"/><span class="input-suffix">kr/kWh</span></div></div>
+<div class="field"><label for="extraPrice">Nettleie, avgifter og påslag</label><div class="input-wrap"><input id="extraPrice" min="0" step="0.01" type="number" value="0.75"/><span class="input-suffix">kr/kWh</span></div><span class="field-help">Skriv inn et gjennomsnitt fra strømregningen din.</span></div>
+</div>
+<div aria-live="polite" class="price-summary">
+<div><span id="spotAreaName">NO1 – Øst-Norge</span><strong id="spotPriceNow">Henter …</strong><small id="spotStatus">Spotpris, før nettleie og andre tillegg</small></div>
+<div class="price-stat"><span>Dagens snitt</span><b id="spotPriceAverage">–</b></div>
+<div class="price-stat"><span>Pris i kalkulatorene</span><b id="effectivePrice">–</b></div>
+</div>
+<p class="small-print">API-prisen er justert med 25 % mva. i NO1, NO2, NO3 og NO5. NO4 vises uten mva. Strømstøtte, kapasitetsledd, fastbeløp og individuelle avtalevilkår er ikke beregnet automatisk. Du kan bruke egen pris for et mer presist anslag.</p>
+</section>
+<section aria-labelledby="chooseCalc" class="container electricity-section">
+<div class="section-heading"><div><h2 id="chooseCalc">Hva vil du regne på?</h2><p>Alle kalkulatorene bruker strømprisen du valgte ovenfor.</p></div></div>
+<div aria-label="Strømkalkulatorer" class="calculator-tabs" role="tablist">
+<button aria-controls="panel-shower" aria-selected="true" class="calc-tab active" data-electricity-tab="shower" role="tab">Dusj</button>
+<button aria-controls="panel-ev" aria-selected="false" class="calc-tab" data-electricity-tab="ev" role="tab">Elbillading</button>
+<button aria-controls="panel-appliance" aria-selected="false" class="calc-tab" data-electricity-tab="appliance" role="tab">Hvitevarer</button>
+<button aria-controls="panel-heating" aria-selected="false" class="calc-tab" data-electricity-tab="heating" role="tab">Oppvarming</button>
+</div>
+<div class="electricity-calculator-card active" data-electricity-panel="shower" id="panel-shower" role="tabpanel">
+<div class="electricity-copy"><span class="eyebrow">Dusj</span><h3>Hva koster en dusj?</h3><p>Et anslag for oppvarming av vann og vann-/avløpskostnad.</p><div class="notice"><strong>Tips:</strong> Kortere dusj og lavere vannmengde reduserer både strøm- og vannkostnaden.</div></div>
+<form class="electricity-form">
+<div class="field"><label for="showerMinutes">Dusjlengde</label><div class="input-wrap"><input id="showerMinutes" max="60" min="1" step="1" type="number" value="10"/><span class="input-suffix">min</span></div></div>
+<div class="field"><label for="showerFlow">Vannmengde</label><div class="input-wrap"><input id="showerFlow" max="30" min="2" step="0.5" type="number" value="10"/><span class="input-suffix">liter/min</span></div></div>
+<div class="field"><label for="showerWaterPrice">Vann og avløp</label><div class="input-wrap"><input id="showerWaterPrice" min="0" step="1" type="number" value="55"/><span class="input-suffix">kr/m³</span></div></div>
+<div class="field"><label for="showersPerWeek">Dusjer per uke</label><div class="input-wrap"><input id="showersPerWeek" max="50" min="0" step="1" type="number" value="7"/><span class="input-suffix">stk.</span></div></div>
+<div class="mini-result"><span>Én dusj</span><strong id="showerResult">–</strong><small><b id="showerMonthly">–</b> per måned · <b id="showerYearly">–</b> per år</small></div>
+</form>
+</div>
+<div class="electricity-calculator-card" data-electricity-panel="ev" hidden="" id="panel-ev" role="tabpanel">
+<div class="electricity-copy"><span class="eyebrow">Elbillading</span><h3>Hva koster det å lade bilen?</h3><p>Beregn hjemmelading med ladetap og valgt strømpris.</p><div class="notice">Hurtiglading og abonnement hos ladeoperatører har egne priser og er ikke med.</div></div>
+<form class="electricity-form">
+<div class="field"><label for="evKwh">Energi inn på batteriet</label><div class="input-wrap"><input id="evKwh" min="1" step="1" type="number" value="40"/><span class="input-suffix">kWh</span></div></div>
+<div class="field"><label for="evLoss">Ladetap</label><div class="input-wrap"><input id="evLoss" max="40" min="0" step="1" type="number" value="12"/><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="evCharges">Ladinger per måned</label><div class="input-wrap"><input id="evCharges" max="100" min="0" step="1" type="number" value="6"/><span class="input-suffix">stk.</span></div></div>
+<div class="mini-result"><span>Én lading</span><strong id="evResult">–</strong><small><b id="evMonthly">–</b> per måned · <b id="evYearly">–</b> per år</small></div>
+</form>
+</div>
+<div class="electricity-calculator-card" data-electricity-panel="appliance" hidden="" id="panel-appliance" role="tabpanel">
+<div class="electricity-copy"><span class="eyebrow">Hvitevarer</span><h3>Hva koster én bruk?</h3><p>Velg et eksempel eller skriv inn forbruket fra energimerket.</p><div class="notice">Faktisk forbruk varierer med program, temperatur, fyllingsgrad og apparat.</div></div>
+<form class="electricity-form">
+<div class="field"><label for="appliancePreset">Apparat</label><select id="appliancePreset"><option value="1.1">Vaskemaskin</option><option selected="" value="2.2">Tørketrommel</option><option value="0.9">Oppvaskmaskin</option><option value="0.6">Stekeovn, én time</option><option value="custom">Egendefinert</option></select></div>
+<div class="field"><label for="applianceKwh">Forbruk per bruk</label><div class="input-wrap"><input id="applianceKwh" min="0" step="0.01" type="number" value="2.2"/><span class="input-suffix">kWh</span></div></div>
+<div class="field"><label for="applianceUses">Bruk per uke</label><div class="input-wrap"><input id="applianceUses" max="100" min="0" step="1" type="number" value="4"/><span class="input-suffix">ganger</span></div></div>
+<div class="mini-result"><span>Én bruk</span><strong id="applianceResult">–</strong><small><b id="applianceMonthly">–</b> per måned · <b id="applianceYearly">–</b> per år</small></div>
+</form>
+</div>
+<div class="electricity-calculator-card" data-electricity-panel="heating" hidden="" id="panel-heating" role="tabpanel">
+<div class="electricity-copy"><span class="eyebrow">Oppvarming</span><h3>Hva koster oppvarming?</h3><p>Et enkelt årsoverslag basert på boligareal og energibehov.</p><div class="notice">Klima, isolasjon, ønsket temperatur og faktisk virkningsgrad kan gi store avvik.</div></div>
+<form class="electricity-form">
+<div class="field"><label for="heatingArea">Oppvarmet areal</label><div class="input-wrap"><input id="heatingArea" min="10" step="1" type="number" value="120"/><span class="input-suffix">m²</span></div></div>
+<div class="field"><label for="heatingNeed">Årlig varmebehov</label><select id="heatingNeed"><option value="60">Godt isolert: 60 kWh/m²</option><option selected="" value="100">Normal bolig: 100 kWh/m²</option><option value="150">Eldre bolig: 150 kWh/m²</option><option value="200">Høyt behov: 200 kWh/m²</option></select></div>
+<div class="field"><label for="heatingFactor">Oppvarmingsløsning</label><select id="heatingFactor"><option value="1">Direkte elektrisk</option><option value="0.42">Varmepumpe, anslag</option><option value="0.75">Blandet oppvarming</option></select></div>
+<div class="mini-result"><span>Estimert kostnad</span><strong id="heatingResult">–</strong><small><b id="heatingMonthly">–</b> per måned · <b id="heatingEnergy">–</b> kjøpt energi per år</small></div>
+</form>
+</div>
+</section>
+<section aria-label="Annonseplass" class="container ad-section" hidden=""><div aria-label="Annonse" class="ad-slot ad-slot-horizontal" data-ad-placement="inline"><span class="ad-label">Annonse</span></div></section>
+</main>
+<footer class="footer">
+<div class="container footer-main">
+<div class="footer-brand"><a class="logo" href="../"><span aria-hidden="true" class="logo-mark">R</span><span>Regninga</span></a><p>Smarte kalkulatorer for norske hverdagsutgifter.</p></div>
+<div class="footer-links"><strong>Regninga</strong><a href="../">Alle kalkulatorer</a><a href="../personvern.html">Personvern</a><a href="../kontakt.html">Kontakt</a></div>
+<div class="footer-note"><strong>Viktig</strong><p>Strømberegningene er anslag. Nettleie, avgifter, strømstøtte og avtalevilkår kan endre faktisk kostnad.</p></div>
+</div>
+<div class="container footer-bottom"><span>© <span data-current-year="">2026</span> Regninga</span><span>regninga.no</span></div>
+</footer>
+<script src="../assets/strom.js"></script>
+<script src="../assets/ads.js"></script>
+<script defer src="../assets/site.js"></script></body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="nb">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Beregn hva bilen koster per måned, per år og per kilometer." name="description"/>
+<title>Hva koster bilen? – Regninga</title>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="../assets/styles.css" rel="stylesheet"/>
+<script src="../assets/ads-config.js"></script><meta content="#090d18" name="theme-color"/><link href="https://regninga.no/bil/" rel="canonical"/><script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8834902676708293"></script>
+<meta content="dark" name="color-scheme"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="Hva koster bilen? – Regninga" property="og:title"/><meta content="Beregn hva bilen koster per måned, per år og per kilometer." property="og:description"/><meta content="website" property="og:type"/><meta content="https://regninga.no/bil/" property="og:url"/><meta content="summary" name="twitter:card"/></head>
+<body data-calculator="bil">
+<a class="skip-link" href="#innhold">Hopp til innhold</a>
+<header class="site-header">
+<div class="container header-inner">
+<a aria-label="Regninga – forsiden" class="logo" href="../"><span aria-hidden="true" class="logo-mark">R</span><span>Regninga</span></a>
+<button aria-controls="main-nav" aria-expanded="false" class="nav-toggle" type="button"><span class="sr-only">Åpne meny</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+<nav aria-label="Hovedmeny" class="nav" id="main-nav"><a href="../bolig/">Bolig</a><a aria-current="page" href="../bil/">Bil</a><a href="../pendling/">Pendling</a><a href="../strom/">Strøm</a><a href="../samboer/">Samboer</a><a href="../hund/">Hund</a><a href="../barn/">Barn</a><a href="../pensjon/">Pensjon</a></nav>
+</div>
+</header>
+<main id="innhold">
+<section class="page-intro"><div class="container"><span class="eyebrow">Bilkalkulator</span><h1>Hva koster bilen egentlig?</h1><p>Ta med verditap, finansiering og alle småutgiftene som ofte forsvinner i det vanlige månedsbudsjettet.</p></div></section><section aria-label="Annonseplass" class="container ad-section" hidden=""><div aria-label="Annonse" class="ad-slot" data-ad-placement="top"><span class="ad-label">Annonse</span></div></section>
+<div class="container calculator-shell">
+<form class="form-card" data-calculator-form="">
+<h2>Dine tall</h2><p class="form-lead">Bruk energiforbruk og pris som passer bensin, diesel eller elbil.</p>
+<fieldset class="form-section"><legend>Kjøp og finansiering</legend><div class="field-grid">
+<div class="field"><label for="price">Kjøpspris</label><div class="input-wrap"><input id="price" min="0" step="10000" type="number" value="450000"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="loanAmount">Billån</label><div class="input-wrap"><input id="loanAmount" min="0" step="10000" type="number" value="300000"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="rate">Effektiv rente</label><div class="input-wrap"><input id="rate" min="0" step="0.1" type="number" value="7.2"/><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="years">Nedbetalingstid</label><div class="input-wrap"><input id="years" max="15" min="1" type="number" value="5"/><span class="input-suffix">år</span></div></div>
+<div class="field full"><label for="depreciation">Forventet verditap per år</label><div class="input-wrap"><input id="depreciation" min="0" step="0.5" type="number" value="12"/><span class="input-suffix">%</span></div></div>
+</div></fieldset>
+<fieldset class="form-section"><legend>Bruk og drift</legend><div class="field-grid">
+<div class="field"><label for="km">Kjørelengde per år</label><div class="input-wrap"><input id="km" min="0" step="1000" type="number" value="15000"/><span class="input-suffix">km</span></div></div>
+<div class="field"><label for="consumption">Forbruk per 100 km</label><div class="input-wrap"><input id="consumption" min="0" step="0.1" type="number" value="18"/><span class="input-suffix">kWh/l</span></div></div>
+<div class="field"><label for="energyPrice">Pris per kWh/liter</label><div class="input-wrap"><input id="energyPrice" min="0" step="0.1" type="number" value="1.5"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="insurance">Forsikring per måned</label><div class="input-wrap"><input id="insurance" min="0" step="50" type="number" value="1200"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="fees">Avgifter per år</label><div class="input-wrap"><input id="fees" min="0" step="100" type="number" value="3500"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="service">Service og reparasjoner per år</label><div class="input-wrap"><input id="service" min="0" step="500" type="number" value="9000"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="tires">Dekk og bilpleie per år</label><div class="input-wrap"><input id="tires" min="0" step="500" type="number" value="5000"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="tollParking">Bom og parkering per måned</label><div class="input-wrap"><input id="tollParking" min="0" step="100" type="number" value="1200"/><span class="input-suffix">kr</span></div></div>
+</div></fieldset>
+</form>
+<aside><section aria-live="polite" class="result-card"><h2>Estimert bilkostnad</h2><p class="result-lead">Finansiering er regnet som utgift i perioden lånet løper.</p><div class="result-main"><div class="label">Per måned</div><div class="value" id="main-result">–</div><div class="sub" id="result-year">–</div></div><dl class="result-list">
+<div class="result-row"><dt>Kostnad per kilometer</dt><dd id="per-km-result">–</dd></div><div class="result-row"><dt>Billån per måned</dt><dd id="loan-result">–</dd></div><div class="result-row"><dt>Verditap per måned</dt><dd id="depreciation-result">–</dd></div><div class="result-row"><dt>Energi/drivstoff per måned</dt><dd id="energy-result">–</dd></div><div class="result-row"><dt>Øvrig drift per måned</dt><dd id="fixed-result">–</dd></div>
+</dl><div class="result-actions"><button class="btn btn-primary" data-copy="" type="button">Kopier resultat</button><button class="btn btn-secondary" data-reset="" type="button">Nullstill</button></div><div class="notice">Verditap er et anslag, ikke en kontant utbetaling. Kalkulatoren tar heller ikke hensyn til alternativ avkastning på egenkapital.</div></section><section aria-label="Annonseplass" class="ad-section ad-section-sidebar" hidden=""><div aria-label="Annonse" class="ad-slot" data-ad-placement="sidebar"><span class="ad-label">Annonse</span></div></section></aside>
+</div>
+</main>
+<footer class="footer">
+<div class="container footer-main">
+<div class="footer-brand"><a class="logo" href="../"><span aria-hidden="true" class="logo-mark">R</span><span>Regninga</span></a><p>Smarte kalkulatorer for norske hverdagsutgifter.</p></div>
+<div class="footer-links"><strong>Regninga</strong><a href="../">Alle kalkulatorer</a><a href="../personvern.html">Personvern</a><a href="../kontakt.html">Kontakt</a></div>
+<div class="footer-note"><strong>Viktig</strong><p>Beregningene er veiledende og erstatter ikke personlig økonomisk rådgivning.</p></div>
+</div>
+<div class="container footer-bottom"><span>© <span data-current-year="">2026</span> Regninga</span><span>regninga.no</span></div>
+</footer>
+<script src="../assets/app.js"></script>
+<script src="../assets/ads.js"></script><script defer src="../assets/site.js"></script></body></html>

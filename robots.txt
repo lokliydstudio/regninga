@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://regninga.no/sitemap.xml
