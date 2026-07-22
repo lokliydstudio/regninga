@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Se hva det faktisk koster å gå ned i stilling, hvor mye fritid du får og hvordan jobbrelaterte besparelser og pensjon påvirkes.">
+<meta name="theme-color" content="#090d18">
+<meta name="color-scheme" content="dark">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>Har jeg råd til å jobbe mindre? – Regninga</title>
+<link rel="canonical" href="https://regninga.no/jobb-mindre/">
+<meta property="og:title" content="Har jeg råd til å jobbe mindre? – Regninga">
+<meta property="og:description" content="Beregn ny nettolønn, spart pendling, ekstra fritid og mulig reduksjon i pensjonssparing.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://regninga.no/jobb-mindre/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/ads-config.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8834902676708293" crossorigin="anonymous"></script>
+</head>
+<body data-calculator="jobb-mindre">
+<a class="skip-link" href="#innhold">Hopp til innhold</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../" aria-label="Regninga – forsiden"><span class="logo-mark" aria-hidden="true">R</span><span>Regninga</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span class="sr-only">Åpne meny</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+    <nav class="nav" id="main-nav" aria-label="Hovedmeny">
+      <a href="../bolig/">Bolig</a><a href="../bil/">Bil</a><a href="../pendling/">Pendling</a><a href="../strom/">Strøm</a><a href="../samboer/">Samboer</a><a href="../hund/">Hund</a><a href="../barn/">Barn</a><a href="../pensjon/">Pensjon</a><a href="../jobb-mindre/" aria-current="page">Jobb mindre</a>
+    </nav>
+  </div>
+</header>
+<main id="innhold">
+  <section class="page-intro work-less-intro">
+    <div class="container">
+      <span class="eyebrow">Jobb mindre-kalkulator</span>
+      <h1>Har jeg råd til å jobbe mindre?</h1>
+      <p>Se hva redusert stilling koster etter spart pendling og andre arbeidsutgifter. Kalkulatoren viser også hvor mange fritimer du får og et enkelt anslag for lavere pensjonssparing.</p>
+    </div>
+  </section>
+
+  <section class="container ad-section" aria-label="Annonseplass" hidden>
+    <div class="ad-slot ad-slot-horizontal" data-ad-placement="top" aria-label="Annonse"><span class="ad-label">Annonse</span></div>
+  </section>
+
+  <div class="container calculator-shell work-less-shell">
+    <form class="form-card" id="workLessForm" novalidate>
+      <h2>Dine tall</h2>
+      <p class="form-lead">Bruk nettolønn fra lønnsslippen. Feltet for ny nettolønn kan stå tomt; da beregnes den forholdsmessig.</p>
+
+      <fieldset class="form-section">
+        <legend>Inntekt og økonomisk handlingsrom</legend>
+        <div class="field-grid">
+          <div class="field">
+            <label for="currentNet">Nettolønn i dag</label>
+            <div class="input-wrap"><input id="currentNet" type="number" min="0" step="500" value="42000"><span class="input-suffix">kr/mnd.</span></div>
+          </div>
+          <div class="field">
+            <label for="newNetManual">Forventet ny nettolønn <span class="optional-label">valgfritt</span></label>
+            <div class="input-wrap"><input id="newNetManual" type="number" min="0" step="500" placeholder="Beregnes automatisk"><span class="input-suffix">kr/mnd.</span></div>
+            <span class="field-help">Fyll inn et beløp fra arbeidsgiver eller skattekalkulator for et mer presist resultat.</span>
+          </div>
+          <div class="field">
+            <label for="currentPercent">Stillingsprosent i dag</label>
+            <div class="input-wrap"><input id="currentPercent" type="number" min="1" max="100" step="5" value="100"><span class="input-suffix">%</span></div>
+          </div>
+          <div class="field">
+            <label for="desiredPercent">Ønsket stillingsprosent</label>
+            <div class="input-wrap"><input id="desiredPercent" type="number" min="0" max="100" step="5" value="80"><span class="input-suffix">%</span></div>
+          </div>
+          <div class="field">
+            <label for="monthlyExpenses">Nødvendige utgifter</label>
+            <div class="input-wrap"><input id="monthlyExpenses" type="number" min="0" step="500" value="25000"><span class="input-suffix">kr/mnd.</span></div>
+            <span class="field-help">Bolig, mat, lån, forsikring og andre utgifter som må betales.</span>
+          </div>
+          <div class="field">
+            <label for="minimumBuffer">Ønsket beløp igjen</label>
+            <div class="input-wrap"><input id="minimumBuffer" type="number" min="0" step="500" value="5000"><span class="input-suffix">kr/mnd.</span></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-section">
+        <legend>Arbeidstid og utgifter du sparer</legend>
+        <div class="field-grid">
+          <div class="field">
+            <label for="fullTimeHours">Timer i en full arbeidsuke</label>
+            <div class="input-wrap"><input id="fullTimeHours" type="number" min="1" max="60" step="0.5" value="37.5"><span class="input-suffix">timer</span></div>
+          </div>
+          <div class="field">
+            <label for="workWeeks">Arbeidsuker per år</label>
+            <div class="input-wrap"><input id="workWeeks" type="number" min="1" max="52" step="1" value="47"><span class="input-suffix">uker</span></div>
+          </div>
+          <div class="field">
+            <label for="currentDays">Arbeidsdager per uke i dag</label>
+            <div class="input-wrap"><input id="currentDays" type="number" min="1" max="7" step="0.5" value="5"><span class="input-suffix">dager</span></div>
+          </div>
+          <div class="field">
+            <label for="desiredDays">Arbeidsdager per uke etterpå</label>
+            <div class="input-wrap"><input id="desiredDays" type="number" min="0" max="7" step="0.5" value="4"><span class="input-suffix">dager</span></div>
+            <span class="field-help">Behold samme antall dager dersom du heller vil jobbe kortere dager.</span>
+          </div>
+          <div class="field">
+            <label for="commuteCost">Pendling per arbeidsdag</label>
+            <div class="input-wrap"><input id="commuteCost" type="number" min="0" step="10" value="120"><span class="input-suffix">kr</span></div>
+          </div>
+          <div class="field">
+            <label for="foodCost">Mat og kaffe per arbeidsdag</label>
+            <div class="input-wrap"><input id="foodCost" type="number" min="0" step="10" value="80"><span class="input-suffix">kr</span></div>
+          </div>
+          <div class="field">
+            <label for="otherDailyCost">Andre kostnader per arbeidsdag</label>
+            <div class="input-wrap"><input id="otherDailyCost" type="number" min="0" step="10" value="30"><span class="input-suffix">kr</span></div>
+          </div>
+          <div class="field">
+            <label for="otherMonthlySavings">Andre månedlige besparelser</label>
+            <div class="input-wrap"><input id="otherMonthlySavings" type="number" min="0" step="100" value="0"><span class="input-suffix">kr/mnd.</span></div>
+            <span class="field-help">For eksempel lavere SFO-, barnepass- eller renholdsutgifter.</span>
+          </div>
+        </div>
+      </fieldset>
+
+      <details class="simple-options work-less-options">
+        <summary>Se mulig effekt på pensjonssparingen</summary>
+        <div class="field-grid">
+          <div class="field">
+            <label for="grossAnnual">Brutto årslønn i dag</label>
+            <div class="input-wrap"><input id="grossAnnual" type="number" min="0" step="5000" value="650000"><span class="input-suffix">kr/år</span></div>
+          </div>
+          <div class="field">
+            <label for="pensionRate">Arbeidsgivers pensjonssats</label>
+            <div class="input-wrap"><input id="pensionRate" type="number" min="0" max="30" step="0.1" value="5"><span class="input-suffix">%</span></div>
+          </div>
+          <div class="field">
+            <label for="yearsToPension">År til pensjon</label>
+            <div class="input-wrap"><input id="yearsToPension" type="number" min="0" max="50" step="1" value="12"><span class="input-suffix">år</span></div>
+          </div>
+          <div class="field">
+            <label for="pensionReturn">Forventet årlig avkastning</label>
+            <div class="input-wrap"><input id="pensionReturn" type="number" min="-5" max="15" step="0.1" value="3"><span class="input-suffix">%</span></div>
+          </div>
+        </div>
+      </details>
+    </form>
+
+    <aside>
+      <section class="result-card work-less-result" aria-live="polite">
+        <div class="work-less-status" id="affordabilityStatus">Beregner</div>
+        <h2>Resultatet ditt</h2>
+        <p class="result-lead" id="resultLead">Juster tallene for å se hva redusert stilling betyr for økonomien din.</p>
+        <div class="result-main">
+          <div class="label">Reell kostnad ved å jobbe mindre</div>
+          <div class="value" id="main-result">–</div>
+          <div class="sub" id="result-year">–</div>
+        </div>
+        <div class="compare-grid work-less-compare">
+          <div class="compare-box"><span>Nettolønn i dag</span><strong id="currentNetResult">–</strong></div>
+          <div class="compare-box"><span>Ny nettolønn</span><strong id="newNetResult">–</strong></div>
+          <div class="compare-box"><span>Igjen etter nødvendige utgifter</span><strong id="leftAfterResult">–</strong></div>
+          <div class="compare-box"><span>Ekstra fritid</span><strong id="freeTimeResult">–</strong></div>
+        </div>
+        <dl class="result-list">
+          <div class="result-row"><dt>Lavere nettolønn</dt><dd id="salaryLossResult">–</dd></div>
+          <div class="result-row"><dt>Spart på jobbrelaterte utgifter</dt><dd id="savingsResult">–</dd></div>
+          <div class="result-row"><dt>Kostnad per ekstra fritime</dt><dd id="hourCostResult">–</dd></div>
+          <div class="result-row"><dt>Reell kostnad per år</dt><dd id="annualCostResult">–</dd></div>
+          <div class="result-row"><dt>Lavere pensjonssparing per år</dt><dd id="annualPensionLossResult">–</dd></div>
+          <div class="result-row"><dt>Mulig mindre pensjonskapital</dt><dd id="pensionPotLossResult">–</dd></div>
+        </dl>
+        <div class="result-actions"><button class="btn btn-primary" id="copyWorkLess" type="button">Kopier resultat</button><button class="btn btn-secondary" id="resetWorkLess" type="button">Nullstill</button></div>
+        <div class="notice" id="workLessNotice">Resultatet er et overslag. Faktisk nettolønn, feriepengeutbetaling, pensjon, trygderettigheter og arbeidsavtale kan påvirkes annerledes.</div>
+      </section>
+      <section class="ad-section ad-section-sidebar" aria-label="Annonseplass" hidden><div class="ad-slot" data-ad-placement="sidebar" aria-label="Annonse"><span class="ad-label">Annonse</span></div></section>
+    </aside>
+  </div>
+
+  <section class="container work-less-info-grid">
+    <article class="info-card"><h2>Slik brukes svaret</h2><p>Den reelle kostnaden er forskjellen mellom gammel og ny nettolønn, minus utgifter du slipper når du jobber færre dager. Beløpet igjen sammenlignes med bufferen du selv ønsker.</p></article>
+    <article class="info-card"><h2>Viktig om nettolønn</h2><p>Skatt endres ikke alltid proporsjonalt med stillingsprosenten. Fyll inn forventet ny nettolønn når du har fått et konkret anslag fra arbeidsgiver eller skattekalkulator.</p></article>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer-main">
+    <div class="footer-brand"><a class="logo" href="../"><span class="logo-mark" aria-hidden="true">R</span><span>Regninga</span></a><p>Smarte kalkulatorer for norske hverdagsutgifter.</p></div>
+    <div class="footer-links"><strong>Regninga</strong><a href="../">Alle kalkulatorer</a><a href="../personvern.html">Personvern</a><a href="../kontakt.html">Kontakt</a></div>
+    <div class="footer-note"><strong>Viktig</strong><p>Beregningen er veiledende og erstatter ikke et konkret tilbud fra arbeidsgiver, skatteberegning eller pensjonsrådgivning.</p></div>
+  </div>
+  <div class="container footer-bottom"><span>© <span data-current-year>2026</span> Regninga</span><span>regninga.no</span></div>
+</footer>
+<script src="../assets/jobb-mindre.js"></script>
+<script src="../assets/ads.js"></script>
+<script defer src="../assets/site.js"></script>
+</body>
+</html>
