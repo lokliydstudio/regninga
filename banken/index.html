@@ -1,20 +1,66 @@
 <!DOCTYPE html>
-<html lang="nb"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Spør Banken om privatøkonomi og finn riktig kalkulator på Regninga.">
-<meta name="theme-color" content="#090d18"><link rel="canonical" href="https://regninga.no/banken/">
-<title>Banken – økonomisøk på Regninga</title><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/styles.css">
-<script src="../assets/ads-config.js"></script><script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8834902676708293"></script>
-</head><body>
+<meta name="theme-color" content="#090d18">
+<link rel="canonical" href="https://regninga.no/banken/">
+<title>Banken – økonomisøk på Regninga</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/styles.css">
+<script src="../assets/ads-config.js"></script>
+<script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8834902676708293"></script>
+</head>
+<body>
 <a class="skip-link" href="#innhold">Hopp til innhold</a>
-<header class="site-header"><div class="container header-inner"><a class="logo" href="../" aria-label="Regninga – forsiden"><span class="logo-mark">R</span><span>Regninga</span></a><button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" type="button"><span class="sr-only">Åpne meny</span><span></span><span></span><span></span></button><nav class="nav" id="main-nav" aria-label="Hovedmeny"><a href="../bolig/">Bolig</a><a href="../strom/">Strøm</a><a href="../pensjon/">Pensjon</a><a href="../jobb-mindre/">Jobb mindre</a><a href="./" aria-current="page">Banken</a></nav></div></header>
-<main id="innhold">
-<section class="bank-hero"><div class="container bank-hero-grid"><div><span class="eyebrow">Økonomisøk på Regninga</span><h1>Spør <em>Banken.</em></h1><p>Still et spørsmål om privatøkonomi. Banken finner riktig kalkulator og gir deg et kort, forståelig svar.</p><div class="bank-trust"><span>Kun økonomi</span><span>Søker lokalt på Regninga</span><span>Ingen innlogging</span></div></div><div class="bank-orb" aria-hidden="true"><span>kr</span></div></div></section>
-<section class="section bank-section"><div class="container bank-layout"><div class="bank-chat-card">
-<div class="bank-chat-head"><div><span class="bank-status"><i></i> Banken er åpen</span><h2>Hva lurer du på?</h2></div><button id="bankClear" class="bank-clear" type="button">Tøm</button></div>
-<div id="bankMessages" class="bank-messages" aria-live="polite"><div class="bank-message bank-message-bot"><div class="bank-avatar">B</div><div><strong>Banken</strong><p>Hei! Spør meg om bolig, bil, strøm, pensjon, samboerøkonomi eller om du har råd til å jobbe mindre.</p></div></div></div>
-<form id="bankForm" class="bank-form"><label class="sr-only" for="bankQuery">Skriv et økonomisk spørsmål</label><textarea id="bankQuery" rows="2" maxlength="300" placeholder="For eksempel: Har jeg råd til å jobbe 80 prosent?" required></textarea><button class="btn btn-primary" type="submit">Spør Banken →</button></form>
-<div class="bank-suggestions"><button type="button">Hva koster boligen min?</button><button type="button">Når kan jeg gå av med pensjon?</button><button type="button">Hva koster det å lade elbil?</button><button type="button">Hvordan deler vi utgiftene?</button></div>
-</div><aside class="bank-side"><span class="eyebrow">Populære søk</span><h2>Gå rett til svaret</h2><div id="bankResults" class="bank-results"><a href="../pensjon/"><strong>Pensjon</strong><span>Enkel eller detaljert beregning →</span></a><a href="../bolig/"><strong>Bolig</strong><span>Se total månedskostnad →</span></a><a href="../jobb-mindre/"><strong>Jobbe mindre</strong><span>Finn kostnaden per fritime →</span></a></div><p class="bank-disclaimer">Banken gir veiledende informasjon og er ikke personlig økonomisk rådgivning.</p></aside></div></section>
-</main><footer class="footer"><div class="container footer-inner"><span>© <span data-current-year></span> Regninga</span><span>Anslagene er veiledende.</span><a href="../personvern.html">Personvern</a></div></footer>
-<script src="../assets/ads.js"></script><script defer src="../assets/site.js"></script><script defer src="../assets/banken.js"></script></body></html>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../" aria-label="Regninga – forsiden"><span class="logo-mark">R</span><span>Regninga</span></a>
+    <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" type="button"><span class="sr-only">Åpne meny</span><span></span><span></span><span></span></button>
+    <nav class="nav" id="main-nav" aria-label="Hovedmeny"><a href="../bolig/">Bolig</a><a href="../strom/">Strøm</a><a href="../pensjon/">Pensjon</a><a href="../jobb-mindre/">Jobb mindre</a><a href="./" aria-current="page">Banken</a></nav>
+  </div>
+</header>
+<main id="innhold" class="bank-page">
+  <section class="bank-clean-hero">
+    <div class="container bank-clean-wrap">
+      <div class="bank-clean-brand" aria-hidden="true"><span>kr</span></div>
+      <span class="eyebrow">Økonomisøk på Regninga</span>
+      <h1>Hva vil du finne ut?</h1>
+      <p>Spør om privatøkonomi. Banken finner riktig kalkulator og sender deg rett videre.</p>
+
+      <div class="bank-search-card">
+        <form id="bankForm" class="bank-search-form">
+          <label class="sr-only" for="bankQuery">Skriv et økonomisk spørsmål</label>
+          <textarea id="bankQuery" rows="1" maxlength="300" placeholder="For eksempel: Har jeg råd til å jobbe 80 prosent?" required></textarea>
+          <button class="bank-search-button" type="submit" aria-label="Spør Banken">→</button>
+        </form>
+        <div class="bank-search-meta"><span><i></i> Kun økonomi</span><button id="bankClear" type="button">Nullstill</button></div>
+      </div>
+
+      <div class="bank-suggestions" aria-label="Forslag til spørsmål">
+        <button type="button">Når kan jeg gå av med pensjon?</button>
+        <button type="button">Hva koster boligen min?</button>
+        <button type="button">Har jeg råd til å jobbe mindre?</button>
+        <button type="button">Hvordan deler vi utgiftene?</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="bank-answer-section">
+    <div class="container bank-answer-wrap">
+      <div id="bankMessages" class="bank-messages" aria-live="polite">
+        <div class="bank-message bank-message-bot">
+          <div class="bank-avatar">B</div>
+          <div><strong>Banken</strong><p>Still et spørsmål, så finner jeg den mest relevante kalkulatoren.</p></div>
+        </div>
+      </div>
+      <div id="bankResults" class="bank-results" aria-label="Relevante kalkulatorer"></div>
+      <p class="bank-disclaimer">Svarene er veiledende og er ikke personlig økonomisk rådgivning.</p>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="container footer-inner"><span>© <span data-current-year></span> Regninga</span><span>Anslagene er veiledende.</span><a href="../personvern.html">Personvern</a></div></footer>
+<script src="../assets/ads.js"></script><script defer src="../assets/site.js"></script><script defer src="../assets/banken.js"></script>
+</body>
+</html>

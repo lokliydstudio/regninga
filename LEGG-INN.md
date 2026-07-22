@@ -1,7 +1,10 @@
-# Legg inn Banken
+# Oppdater Banken
 
-Kopier alle filene og mappene i denne pakken til roten av Regninga-prosjektet. Godta overskriving av eksisterende filer.
+Kopier innholdet i denne pakken til roten av Regninga-prosjektet og godta overskriving.
 
-Banken blir tilgjengelig på `https://regninga.no/banken/`.
+Filer som oppdateres:
+- `banken/index.html`
+- `assets/styles.css`
+- `assets/banken.js`
 
-Løsningen fungerer lokalt uten API-nøkkel: den gjenkjenner økonomiske spørsmål og finner riktig kalkulator. Spørsmål utenfor økonomi avvises.
+Forsiden og sitemap-filen i pakken er uendret fra forrige Banken-oppdatering og kan også kopieres inn dersom de ikke allerede er lagt inn.

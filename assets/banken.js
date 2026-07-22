@@ -21,8 +21,8 @@ function answer(q){const low=q.toLowerCase(), found=rank(q), isEconomy=economyWo
  if(found.length){const top=found.slice(0,3);let text=`Det høres ut som du bør starte med <strong>${top[0].title}</strong>. ${top[0].desc}`;if(low.includes('råd')||low.includes('budsjett')) text+=' Legg inn dine egne tall for et mer nyttig estimat.';add(text,'bot',top);showResults(top);return}
  add('Det er absolutt mitt bord. Jeg fant ingen helt presis kalkulator ennå, men prøv å skrive spørsmålet med ord som bolig, bil, strøm, pensjon, samboer eller jobb mindre.');
 }
-function showResults(items){results.innerHTML=items.map(x=>`<a href="${x.url}"><strong>${x.title}</strong><span>${x.desc} →</span></a>`).join('')}
+function showResults(items){results.innerHTML=items.map(x=>`<a href="${x.url}"><strong>${x.title}</strong><span>${x.desc}</span></a>`).join('')}
 form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q)return;add(q,'user');input.value='';setTimeout(()=>answer(q),260)});
 document.querySelectorAll('.bank-suggestions button').forEach(b=>b.addEventListener('click',()=>{input.value=b.textContent;form.requestSubmit()}));
-document.getElementById('bankClear').addEventListener('click',()=>{messages.innerHTML='<div class="bank-message bank-message-bot"><div class="bank-avatar">B</div><div><strong>Banken</strong><p>Ny runde. Hva vil du regne på?</p></div></div>';input.focus()});
+document.getElementById('bankClear').addEventListener('click',()=>{messages.innerHTML='<div class="bank-message bank-message-bot"><div class="bank-avatar">B</div><div><strong>Banken</strong><p>Still et spørsmål, så finner jeg den mest relevante kalkulatoren.</p></div></div>';results.innerHTML='';input.focus()});
 })();
