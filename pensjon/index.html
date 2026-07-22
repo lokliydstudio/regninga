@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="nb">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Detaljert norsk pensjonskalkulator for folketrygd, gradert arbeid, AFP, tjenestepensjon og egen pensjonssparing." name="description"/>
+<meta content="#090d18" name="theme-color"/>
+<meta content="Pensjonskalkulator – Regninga" property="og:title"/>
+<meta content="Detaljert norsk pensjonskalkulator for folketrygd, gradert arbeid, AFP, tjenestepensjon og egen pensjonssparing." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://regninga.no/pensjon/" property="og:url"/>
+<link href="https://regninga.no/pensjon/" rel="canonical"/>
+<title>Pensjonskalkulator – Regninga</title>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/styles.css" rel="stylesheet"/>
+<script src="../assets/ads-config.js"></script>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8834902676708293"></script>
+<meta content="dark" name="color-scheme"/><meta content="index, follow, max-image-preview:large" name="robots"/><meta content="summary" name="twitter:card"/></head>
+<body class="pension-page">
+<a class="skip-link" href="#innhold">Hopp til innhold</a>
+<header class="site-header">
+<div class="container header-inner">
+<a aria-label="Regninga – forsiden" class="logo" href="../"><span aria-hidden="true" class="logo-mark">R</span><span>Regninga</span></a>
+<button aria-controls="main-nav" aria-expanded="false" class="nav-toggle" type="button"><span class="sr-only">Åpne meny</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+<nav aria-label="Hovedmeny" class="nav" id="main-nav"><a href="../bolig/">Bolig</a><a href="../bil/">Bil</a><a href="../pendling/">Pendling</a><a href="../strom/">Strøm</a><a href="../samboer/">Samboer</a><a href="../hund/">Hund</a><a href="../barn/">Barn</a><a aria-current="page" href="../pensjon/">Pensjon</a></nav>
+</div>
+</header>
+<main id="innhold">
+<section class="page-intro pension-intro">
+<div class="container pension-intro-grid">
+<div>
+<span class="eyebrow">Pensjonskalkulator</span>
+<h1>Se hele veien inn i pensjonistlivet.</h1>
+<p>Legg inn tallene fra NAV og pensjonsleverandøren din. Sammenlign full jobb, redusert stilling med pensjon og full pensjon – måned for måned.</p>
+<div aria-label="Viktig informasjon" class="pension-trust-row">
+<span>Store og tydelige felt</span><span>Lagres bare i nettleseren</span><span>Alle beløp i dagens kroner</span>
+</div>
+</div>
+<aside class="pension-start-card">
+<div class="step-number">Før du starter</div>
+<h2>Finn frem tre tall</h2>
+<ol>
+<li>Årlig alderspensjon ved 67 år fra <a href="https://www.nav.no/alderspensjon" rel="noopener" target="_blank">Din pensjon hos NAV</a>.</li>
+<li>Årlig AFP, dersom du har rett til AFP.</li>
+<li>Årlig tjenestepensjon eller pensjonskapital fra <a href="https://norskpensjon.no/" rel="noopener" target="_blank">Norsk Pensjon</a>.</li>
+</ol>
+<p>Da blir scenarioene langt mer treffsikre enn et anslag basert bare på lønn og arbeidsår.</p>
+</aside>
+</div>
+</section>
+<section aria-label="Annonseplass" class="container ad-section" hidden="">
+<div aria-label="Annonse" class="ad-slot ad-slot-horizontal" data-ad-placement="top"><span class="ad-label">Annonse</span></div>
+</section>
+
+<section aria-label="Velg pensjonskalkulator" class="container pension-mode-section">
+<div class="pension-mode-card">
+<div>
+<span class="eyebrow">Velg nivå</span>
+<h2>Enkel eller detaljert beregning?</h2>
+<p>Start enkelt med de viktigste beløpene, eller bruk alle valgene for å sammenligne flere pensjonsscenarioer.</p>
+</div>
+<nav aria-label="Pensjonskalkulatorer" class="pension-mode-switch">
+<a href="enkel/"><strong>Enkel</strong><small>Rask oversikt</small></a>
+<a aria-current="page" class="active" href="./"><strong>Detaljert</strong><small>Alle variabler</small></a>
+</nav>
+</div>
+</section>
+<section class="container pension-workspace">
+<form class="pension-form" id="pensionForm">
+<details class="pension-step" open="">
+<summary><span class="step-badge">1</span><span><strong>Deg og planen din</strong><small>Når vil du trappe ned, og når vil du slutte helt?</small></span></summary>
+<div class="step-content">
+<div class="field-grid pension-fields">
+<div class="field"><label for="birthYear">Fødselsår</label><div class="input-wrap"><input id="birthYear" max="1970" min="1940" step="1" type="number" value="1959"/><span class="input-suffix">år</span></div><span class="field-help" id="ageHelp">Du er omtrent 67 år i 2026.</span></div>
+<div class="field"><label for="currentSalary">Årslønn i 100 % stilling</label><div class="input-wrap"><input id="currentSalary" min="0" step="10000" type="number" value="650000"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="currentWorkPercent">Stillingsprosent nå</label><div class="input-wrap"><input id="currentWorkPercent" max="100" min="0" step="5" type="number" value="100"/><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="lifeAge">Regn frem til alder</label><div class="input-wrap"><input id="lifeAge" max="105" min="75" step="1" type="number" value="90"/><span class="input-suffix">år</span></div><span class="field-help">Brukes bare til å sammenligne samlet utbetaling.</span></div>
+<div class="field"><label for="phaseStartAge">Start redusert arbeid / pensjon</label><div class="input-wrap"><input id="phaseStartAge" max="75" min="62" step="1" type="number" value="67"/><span class="input-suffix">år</span></div></div>
+<div class="field"><label for="fullRetirementAge">Slutt helt i arbeid</label><div class="input-wrap"><input id="fullRetirementAge" max="75" min="62" step="1" type="number" value="70"/><span class="input-suffix">år</span></div></div>
+<div class="field"><label for="phaseWorkPercent">Stillingsprosent i nedtrappingen</label><div class="input-wrap"><input id="phaseWorkPercent" max="100" min="0" step="5" type="number" value="50"/><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="phasePensionPercent">Uttak av folketrygd i nedtrappingen</label><select id="phasePensionPercent"><option value="0">0 % – vent med pensjon</option><option value="20">20 %</option><option value="40">40 %</option><option selected="" value="50">50 %</option><option value="60">60 %</option><option value="80">80 %</option><option value="100">100 %</option></select></div>
+</div>
+</div>
+</details>
+<details class="pension-step" open="">
+<summary><span class="step-badge">2</span><span><strong>Folketrygd fra NAV</strong><small>Bruk helst beløpet fra Din pensjon.</small></span></summary>
+<div class="step-content">
+<div class="info-strip"><strong>Mest presist:</strong> Skriv inn NAVs beregnede årsbeløp ved 67 år. Regninga bruker dette som anker og lager scenarioer rundt uttaksalder og gradert arbeid.</div>
+<div class="field-grid pension-fields">
+<div class="field"><label for="navAnnual67">Årlig folketrygd ved 67 år</label><div class="input-wrap"><input id="navAnnual67" min="0" step="5000" type="number" value="310000"/><span class="input-suffix">kr/år</span></div></div>
+<div class="field"><label for="navAnnualPhaseExact">NAV-beløp ved startalderen, valgfritt</label><div class="input-wrap"><input id="navAnnualPhaseExact" min="0" step="5000" type="number" value="0"/><span class="input-suffix">kr/år</span></div><span class="field-help">Har NAV gitt deg et eksakt beløp ved valgt startalder, overstyrer dette anslaget.</span></div>
+<div class="field"><label for="futureNavMode">Ekstra opptjening ved videre arbeid</label><select id="futureNavMode"><option value="auto">Lag et forsiktig anslag</option><option value="manual">Jeg legger inn NAVs anslag selv</option><option selected="" value="none">Ikke ta det med – NAV-beløpet inkluderer videre arbeid</option></select></div>
+<div class="field"><label for="futureNavManual">Ekstra årlig pensjon etter videre arbeid</label><div class="input-wrap"><input id="futureNavManual" min="0" step="1000" type="number" value="0"/><span class="input-suffix">kr/år</span></div><span class="field-help">Brukes når «jeg legger inn selv» er valgt.</span></div>
+<div class="field"><label for="salaryTaxRate">Anslått skatt på lønn</label><div class="input-wrap"><input id="salaryTaxRate" max="60" min="0" step="1" type="number" value="30"/><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="pensionTaxRate">Anslått skatt på pensjon</label><div class="input-wrap"><input id="pensionTaxRate" max="60" min="0" step="1" type="number" value="20"/><span class="input-suffix">%</span></div><span class="field-help">Skatt varierer mye. Sjekk skattekortet når du kombinerer lønn og pensjon.</span></div>
+</div>
+</div>
+</details>
+<details class="pension-step">
+<summary><span class="step-badge">3</span><span><strong>Arbeidshistorikk</strong><small>Se hvor mange heltidsår arbeidstiden din tilsvarer.</small></span></summary>
+<div class="step-content">
+<p class="step-explainer">Arbeidshistorikken brukes til å vise samlet arbeidsomfang og som en kontroll av anslaget. Den kan ikke alene gjenskape NAVs individuelle beregning, spesielt for årskull født 1954–1962.</p>
+<div aria-label="Arbeidshistorikk" class="work-history-table" role="group">
+<div class="work-history-head"><span>Periode</span><span>Antall år</span><span>Stillingsprosent</span><span>Gjennomsnittslønn i dagens kroner</span></div>
+<div class="work-history-row"><strong>Tidlig arbeidsliv</strong><div class="input-wrap"><input id="workYears1" max="50" min="0" step="1" type="number" value="15"/><span class="input-suffix">år</span></div><div class="input-wrap"><input id="workPercent1" max="100" min="0" step="5" type="number" value="100"/><span class="input-suffix">%</span></div><div class="input-wrap"><input id="workSalary1" min="0" step="10000" type="number" value="450000"/><span class="input-suffix">kr</span></div></div>
+<div class="work-history-row"><strong>Midt i arbeidslivet</strong><div class="input-wrap"><input id="workYears2" max="50" min="0" step="1" type="number" value="15"/><span class="input-suffix">år</span></div><div class="input-wrap"><input id="workPercent2" max="100" min="0" step="5" type="number" value="100"/><span class="input-suffix">%</span></div><div class="input-wrap"><input id="workSalary2" min="0" step="10000" type="number" value="580000"/><span class="input-suffix">kr</span></div></div>
+<div class="work-history-row"><strong>Senere arbeidsår</strong><div class="input-wrap"><input id="workYears3" max="50" min="0" step="1" type="number" value="10"/><span class="input-suffix">år</span></div><div class="input-wrap"><input id="workPercent3" max="100" min="0" step="5" type="number" value="80"/><span class="input-suffix">%</span></div><div class="input-wrap"><input id="workSalary3" min="0" step="10000" type="number" value="650000"/><span class="input-suffix">kr</span></div></div>
+</div>
+<div class="history-summary"><span><small>Arbeidsår totalt</small><strong id="historyYears">–</strong></span><span><small>Tilsvarer heltidsår</small><strong id="historyFullYears">–</strong></span><span><small>Gjennomsnittlig stilling</small><strong id="historyAveragePercent">–</strong></span><span><small>Vektet lønnsnivå</small><strong id="historyAverageSalary">–</strong></span></div>
+</div>
+</details>
+<details class="pension-step" open="">
+<summary><span class="step-badge">4</span><span><strong>AFP og tjenestepensjon</strong><small>Ta med både tariffordning og pensjon fra arbeidsgiver.</small></span></summary>
+<div class="step-content">
+<div class="field-grid pension-fields">
+<div class="field full"><label for="afpType">Hvilken AFP-ordning gjelder for deg?</label><select id="afpType"><option value="none">Ingen AFP / usikker</option><option selected="" value="private">Privat AFP – livsvarig tillegg</option><option value="public-old">Offentlig AFP – født 1962 eller tidligere</option><option value="public-new">Offentlig livsvarig AFP – født 1963 eller senere</option></select></div>
+<div class="field"><label for="afpAnnual">Forventet AFP per år</label><div class="input-wrap"><input id="afpAnnual" min="0" step="5000" type="number" value="65000"/><span class="input-suffix">kr/år</span></div><span class="field-help">Bruk beløpet fra NAV, Fellesordningen eller offentlig pensjonsleverandør.</span></div>
+<div class="field"><label for="afpStartAge">Startalder for AFP</label><div class="input-wrap"><input id="afpStartAge" max="75" min="62" step="1" type="number" value="67"/><span class="input-suffix">år</span></div></div>
+<div class="field"><label for="afpTemporaryMonthly">Midlertidig AFP-tillegg frem til 67, valgfritt</label><div class="input-wrap"><input id="afpTemporaryMonthly" min="0" step="100" type="number" value="0"/><span class="input-suffix">kr/mnd.</span></div><span class="field-help">Legg bare inn beløpet dersom det ikke allerede er med i årsbeløpet.</span></div>
+<div class="field"><label for="workplaceAnnual">Tjenestepensjon ved fullt uttak</label><div class="input-wrap"><input id="workplaceAnnual" min="0" step="5000" type="number" value="90000"/><span class="input-suffix">kr/år</span></div></div>
+<div class="field"><label for="workplaceStartAge">Startalder tjenestepensjon</label><div class="input-wrap"><input id="workplaceStartAge" max="75" min="62" step="1" type="number" value="67"/><span class="input-suffix">år</span></div></div>
+<div class="field"><label for="workplacePhasePercent">Uttak i nedtrappingsperioden</label><div class="input-wrap"><input id="workplacePhasePercent" max="100" min="0" step="10" type="number" value="50"/><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="workplaceDuration">Utbetalingsperiode</label><select id="workplaceDuration"><option selected="" value="99">Livsvarig</option><option value="10">10 år</option><option value="15">15 år</option><option value="20">20 år</option></select></div>
+</div>
+</div>
+</details>
+<details class="pension-step" open="">
+<summary><span class="step-badge">5</span><span><strong>Egen pensjon og annen inntekt</strong><small>IPS, fond, pensjonskapital og andre faste beløp.</small></span></summary>
+<div class="step-content">
+<div class="field-grid pension-fields">
+<div class="field"><label for="privatePot">Oppspart pensjonskapital nå</label><div class="input-wrap"><input id="privatePot" min="0" step="10000" type="number" value="500000"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="privateMonthlySaving">Månedlig sparing frem til full pensjon</label><div class="input-wrap"><input id="privateMonthlySaving" min="0" step="500" type="number" value="2000"/><span class="input-suffix">kr/mnd.</span></div></div>
+<div class="field"><label for="privateReturn">Forventet årlig avkastning før uttak</label><div class="input-wrap"><input id="privateReturn" max="15" min="-5" step="0.5" type="number" value="3.5"/><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="privateReturnDuring">Forventet avkastning under uttak</label><div class="input-wrap"><input id="privateReturnDuring" max="12" min="-5" step="0.5" type="number" value="2"/><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="privateStartAge">Start uttak av egen pensjon</label><div class="input-wrap"><input id="privateStartAge" max="80" min="62" step="1" type="number" value="70"/><span class="input-suffix">år</span></div></div>
+<div class="field"><label for="privateDuration">Fordel kapitalen over</label><select id="privateDuration"><option value="10">10 år</option><option selected="" value="15">15 år</option><option value="20">20 år</option><option value="25">25 år</option></select></div>
+<div class="field full"><label for="otherAnnual">Andre årlige inntekter som pensjonist</label><div class="input-wrap"><input id="otherAnnual" min="0" step="5000" type="number" value="0"/><span class="input-suffix">kr/år</span></div><span class="field-help">For eksempel livrente eller fast leieinntekt. Husk at skatt kan være annerledes enn pensjonsskatt.</span></div>
+</div>
+</div>
+</details>
+<div class="pension-form-actions">
+<button class="btn btn-primary" id="recalculateButton" type="button">Oppdater beregningen</button>
+<button class="btn btn-secondary" id="resetPension" type="button">Nullstill</button>
+<button class="btn btn-secondary" id="printPension" type="button">Skriv ut</button>
+</div>
+</form>
+<aside aria-live="polite" class="pension-results">
+<section class="result-card pension-result-card">
+<span class="result-status">Ditt valgte scenario</span>
+<h2>Redusert jobb, deretter full pensjon</h2>
+<div class="result-main pension-main-result"><div class="label">Anslått utbetalt per måned etter full pensjon</div><div class="value" id="pensionMainResult">–</div><div class="sub" id="pensionMainSub">–</div></div>
+<div class="pension-phase-grid">
+<div><span>I nedtrappingsperioden</span><strong id="phaseNetMonthly">–</strong><small id="phaseGrossMonthly">–</small></div>
+<div><span>Etter full pensjon</span><strong id="fullNetMonthly">–</strong><small id="fullGrossMonthly">–</small></div>
+</div>
+<dl class="result-list pension-breakdown">
+<div class="result-row"><dt>Folketrygd etter full pensjon</dt><dd id="navResult">–</dd></div>
+<div class="result-row"><dt>AFP</dt><dd id="afpResult">–</dd></div>
+<div class="result-row"><dt>Tjenestepensjon</dt><dd id="workplaceResult">–</dd></div>
+<div class="result-row"><dt>Egen pensjon</dt><dd id="privateResult">–</dd></div>
+<div class="result-row"><dt>Inntekt sammenlignet med dagens lønn</dt><dd id="replacementResult">–</dd></div>
+</dl>
+<div class="result-actions"><button class="btn btn-primary" id="copyPension" type="button">Kopier oppsummering</button></div>
+<div class="notice" id="pensionWarnings">Fyll inn tallene dine for å se viktige merknader.</div>
+</section>
+<section class="pension-chart-card">
+<div class="chart-heading"><div><span class="eyebrow">År for år</span><h2>Inntekten gjennom pensjoneringen</h2></div><div class="chart-legend"><span class="salary-dot">Arbeid</span><span class="pension-dot">Pensjon</span><span class="total-dot">Totalt</span></div></div>
+<canvas aria-label="Graf som viser årlig arbeidsinntekt og pensjon etter alder" height="360" id="pensionChart" role="img" width="720"></canvas>
+<p class="small-print">Grafen viser brutto årsinntekt i dagens kroner. Hold pekeren over grafen for detaljer.</p>
+<div class="chart-tooltip" hidden="" id="chartTooltip"></div>
+</section>
+</aside>
+</section>
+<section class="container scenario-section">
+<div class="section-heading"><div><span class="eyebrow">Sammenlign valgene</span><h2>Tre veier frem til pensjon</h2><p>Beløpene under er samlet anslått inntekt etter skatt fra i dag til valgt levealder.</p></div></div>
+<div class="scenario-grid">
+<article class="scenario-card"><span class="scenario-tag">Tidlig</span><h3>Slutt helt ved startalderen</h3><strong id="scenarioEarlyTotal">–</strong><p id="scenarioEarlyMonthly">–</p><small>Full pensjon fra startalderen, ingen arbeidsinntekt etterpå.</small></article>
+<article class="scenario-card recommended"><span class="scenario-tag">Din plan</span><h3>Jobb redusert og ta delvis pensjon</h3><strong id="scenarioPhasedTotal">–</strong><p id="scenarioPhasedMonthly">–</p><small>Valgt stillingsprosent og gradert uttak frem til full pensjon.</small></article>
+<article class="scenario-card"><span class="scenario-tag">Vent</span><h3>Jobb fullt til sluttalderen</h3><strong id="scenarioWaitTotal">–</strong><p id="scenarioWaitMonthly">–</p><small>Ingen pensjon i nedtrappingsperioden og høyere anslått folketrygd senere.</small></article>
+</div>
+<div class="break-even-card"><div><span class="eyebrow">Forskjellen</span><h3 id="bestScenarioHeading">–</h3><p id="bestScenarioText">–</p></div><div class="break-even-number"><small>Største beregnede forskjell</small><strong id="scenarioDifference">–</strong></div></div>
+</section>
+<section class="container pension-method-section">
+<div class="pension-method-grid">
+<article class="info-card">
+<h2>Dette tar kalkulatoren med</h2>
+<ul><li>Folketrygd med gradert uttak og senere fullt uttak.</li><li>Lønn under redusert arbeid.</li><li>AFP, inkludert forskjellen mellom gammel offentlig AFP og livsvarige ordninger.</li><li>Tjenestepensjon, egen pensjonskapital, sparing og forventet avkastning.</li><li>En enkel separat skatteprosent for lønn og pensjon.</li></ul>
+</article>
+<article class="info-card">
+<h2>Dette må kontrolleres hos fagkilden</h2>
+<ul><li>Om du faktisk oppfyller AFP-vilkårene på uttakstidspunktet.</li><li>Individuelt delingstall, forholdstall og overgangsregler for ditt årskull.</li><li>Samordning og uttaksregler i din tjenestepensjonsordning.</li><li>Nøyaktig skatt når lønn og pensjon kombineres.</li></ul>
+</article>
+</div>
+<div class="source-card">
+<strong>Regelgrunnlag kontrollert 22. juli 2026.</strong>
+<p>Kalkulatoren bruker 2026-grunnbeløpet på 136 549 kr i det valgfrie anslaget for videre opptjening. Den endelige pensjonen må alltid bekreftes hos NAV og pensjonsleverandøren.</p>
+<div class="source-links"><a href="https://www.nav.no/alderspensjon" rel="noopener" target="_blank">NAV: Alderspensjon</a><a href="https://www.nav.no/afp-i-privat-sektor" rel="noopener" target="_blank">NAV: Privat AFP</a><a href="https://www.nav.no/afp-offentlig" rel="noopener" target="_blank">NAV: Offentlig AFP før 1963</a><a href="https://www.spk.no/alderspensjon/fodt-i-1963-eller-etter/livsvarig-afp/" rel="noopener" target="_blank">SPK: Livsvarig AFP</a><a href="https://norskpensjon.no/" rel="noopener" target="_blank">Norsk Pensjon</a><a href="https://www.skatteetaten.no/person/skatt/skattekort/pensjonist/" rel="noopener" target="_blank">Skatteetaten</a></div>
+</div>
+</section>
+<section aria-label="Annonseplass" class="container ad-section" hidden="">
+<div aria-label="Annonse" class="ad-slot ad-slot-horizontal" data-ad-placement="inline"><span class="ad-label">Annonse</span></div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer-main">
+<div class="footer-brand"><a class="logo" href="../"><span aria-hidden="true" class="logo-mark">R</span><span>Regninga</span></a><p>Smarte kalkulatorer for norske hverdagsutgifter.</p></div>
+<div class="footer-links"><strong>Regninga</strong><a href="../">Alle kalkulatorer</a><a href="../personvern.html">Personvern</a><a href="../kontakt.html">Kontakt</a></div>
+<div class="footer-note"><strong>Viktig</strong><p>Pensjonsberegningen er et scenario, ikke en offisiell beregning fra NAV eller pensjonsleverandøren.</p></div>
+</div>
+<div class="container footer-bottom"><span>© <span data-current-year="">2026</span> Regninga</span><span>regninga.no</span></div>
+</footer>
+<script src="../assets/pensjon.js"></script>
+<script src="../assets/ads.js"></script>
+<script defer="" src="../assets/site.js"></script></body>
+</html>
