@@ -1,0 +1,7 @@
+name = "regninga-banken"
+main = "src/index.js"
+compatibility_date = "2026-07-22"
+
+[vars]
+ALLOWED_ORIGINS = "https://regninga.no,https://www.regninga.no"
+OPENAI_MODEL = "gpt-5-mini"
