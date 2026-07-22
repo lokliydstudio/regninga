@@ -1,0 +1,27 @@
+/* Regninga – header uten toppmeny */
+.site-header .main-nav,
+.site-header .nav,
+.site-header .nav-links,
+.site-header .nav-menu,
+.site-header .desktop-nav,
+.site-header .mobile-nav,
+.site-header .menu-button,
+.site-header .menu-toggle,
+.site-header .nav-toggle,
+.site-header [aria-label="Hovedmeny"],
+.site-header [aria-controls="mainNav"],
+.site-header [aria-controls="mobileMenu"] {
+  display: none !important;
+}
+
+.site-header .nav-wrap,
+.site-header .header-inner,
+.site-header .header-content,
+.site-header .shell {
+  justify-content: flex-start !important;
+}
+
+/* Tomme kompatibilitetselementer for eldre JavaScript er aldri synlige. */
+.regninga-menu-compat {
+  display: none !important;
+}

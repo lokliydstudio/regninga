@@ -1,27 +1,27 @@
-# Banken – lokal søkemotor
+# Fjern toppmenyen fra hele Regninga
 
-Denne oppdateringen fjerner KI-funksjonen helt og gjør Banken til et lokalt søk på Regninga.
+Denne oppdateringen fjerner menyen med **Bolig, Bil, Pendling, Strøm, Samboer, Hund, Barn, Pensjon, Jobb mindre og Banken** fra alle HTML-sider.
 
-## Slik installerer du
+## Slik gjør du
 
-1. Pakk ut ZIP-filen.
-2. Kopier alle filene og mappene til roten av GitHub-prosjektet for regninga.no.
-3. Godta overskriving av eksisterende filer.
-4. Commit og push endringene til GitHub Pages.
+1. Pakk ut innholdet i roten av Regninga-prosjektet, der `index.html` ligger.
+2. Åpne terminalen i prosjektmappen.
+3. Kjør:
 
-## Dette er endret
+```bash
+python fjern-toppmeny.py
+```
 
-- OpenAI- og Cloudflare-koblingen er fjernet.
-- `banken-config.js` brukes ikke lenger.
-- Banken søker kun i en lokal liste over kalkulatorene.
-- Forsiden har fått en søkeboks.
-- Ved et tydelig treff sendes brukeren rett til kalkulatoren.
-- Ved flere mulige treff åpnes Banken med en kort resultatliste.
-- Ingen søketekst sendes til eksterne tjenester.
+Skriptet:
 
-Du kan slette gamle KI-filer fra prosjektet dersom de finnes:
+- går gjennom alle HTML-filene
+- fjerner menyknapp, desktopmeny og mobilmeny fra headeren
+- fjerner all tekst og alle lenker fra menyområdet
+- legger inn en ren headerstil
+- lager sikkerhetskopi i `.regninga-backup-for-menyfjerning`
 
-- `assets/banken-config.js`
-- eventuell mappe med Cloudflare Worker-kode
+Etterpå kan du slette `fjern-toppmeny.py` og denne veiledningen. Behold `assets/header-uten-meny.css`.
 
-API-nøkkelen bør også slettes eller deaktiveres i OpenAI dersom den ikke skal brukes andre steder.
+## GitHub Pages
+
+Last opp de endrede HTML-filene og `assets/header-uten-meny.css`, og publiser som vanlig.
