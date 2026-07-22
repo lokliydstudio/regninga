@@ -773,3 +773,20 @@ h1, h2, h3, p, li, dt, dd, strong, small, a, label { overflow-wrap: anywhere; }
   .work-less-options, .work-less-info-grid { display: none !important; }
   .work-less-result { position: static; }
 }
+/* Regninga: ren topp uten navigasjonsmeny */
+.site-header .nav,
+.site-header .nav-toggle,
+.site-header .main-nav,
+.site-header .menu-button {
+  display: none !important;
+}
+
+.site-header .header-inner,
+.site-header .nav-wrap {
+  justify-content: flex-start !important;
+}
+
+.site-header .logo,
+.site-header .brand {
+  margin-right: 0 !important;
+}
