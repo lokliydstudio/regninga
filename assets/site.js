@@ -17,6 +17,14 @@
   }
 
 
+  if (nav && !nav.querySelector('a[href*="banken"]')) {
+    const bankLink = document.createElement('a');
+    bankLink.href = '/banken/';
+    bankLink.textContent = 'Banken';
+    if (window.location.pathname.startsWith('/banken')) bankLink.setAttribute('aria-current', 'page');
+    nav.appendChild(bankLink);
+  }
+
   if (!button || !nav) return;
 
   const closeMenu = () => {
