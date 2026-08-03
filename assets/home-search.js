@@ -56,6 +56,13 @@
     {title:'Hund',url:'hund/',keys:['hund','valp','veterinær','hundefôr','hundemat']}
   ];
   const normalize = value => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const escapeHtml = value => value.replace(/[&<>"]/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[character]));
+
+  input.setAttribute('role', 'combobox');
+  input.setAttribute('aria-autocomplete', 'list');
+  input.setAttribute('aria-controls', 'homeSearchResults');
+  input.setAttribute('aria-expanded', 'false');
+
   function matches(query) {
     const q = normalize(query.trim());
     const words = q.split(/\s+/).filter(word => word.length > 1);
@@ -64,19 +71,53 @@
       let score = 0;
       page.keys.forEach(key => {
         const k = normalize(key);
-        if (q.includes(k)) score += k.includes(' ') ? 8 : 5;
-        if (k.includes(q)) score += 4;
+        if (q === k) score += 12;
+        else if (q.includes(k)) score += k.includes(' ') ? 8 : 5;
+        if (k.startsWith(q)) score += 5;
+        else if (k.includes(q)) score += 3;
       });
       words.forEach(word => { if (text.includes(word)) score += word.length >= 5 ? 2 : 1; });
       return {...page, score};
-    }).filter(page => page.score > 0).sort((a, b) => b.score - a.score);
+    }).filter(page => page.score > 0).sort((a, b) => b.score - a.score || a.title.localeCompare(b.title, 'nb'));
   }
+
+  function renderSuggestions(query) {
+    if (query.trim().length < 2) {
+      results.innerHTML = '';
+      input.setAttribute('aria-expanded', 'false');
+      return [];
+    }
+    const found = matches(query).slice(0, 5);
+    if (!found.length) {
+      results.innerHTML = '<p class="search-no-result">Ingen direkte treff. Trykk «Finn kalkulator» for å få hjelp.</p>';
+      input.setAttribute('aria-expanded', 'true');
+      return [];
+    }
+    results.innerHTML = `<div class="search-suggestion-list" role="listbox">${found.map(page => `
+      <a class="search-suggestion" role="option" href="${page.url}">
+        <span>${escapeHtml(page.title)}</span><small>Start kalkulator <span aria-hidden="true">→</span></small>
+      </a>`).join('')}</div>`;
+    input.setAttribute('aria-expanded', 'true');
+    return found;
+  }
+
+  input.addEventListener('input', () => renderSuggestions(input.value));
+  input.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      results.innerHTML = '';
+      input.setAttribute('aria-expanded', 'false');
+    }
+  });
+
   form.addEventListener('submit', event => {
     event.preventDefault();
     const query = input.value.trim();
-    if (!query) return;
+    if (!query) {
+      input.focus();
+      return;
+    }
     const found = matches(query);
-    if (found.length === 1 || (found[0] && found[0].score >= 5 && (!found[1] || found[0].score >= found[1].score + 3))) {
+    if (found.length) {
       window.location.href = found[0].url;
       return;
     }

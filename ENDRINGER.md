@@ -72,3 +72,13 @@ Alle er koblet til forsiden, hovedsøket, Banken og sitemap.xml.
 - Lager en ferdig melding som kan sendes til banken for å be om bedre rente.
 - Integrerer Finansportalens offisielle boliglånsoversikt som uendret iframe.
 - Lagt til i toppmeny, forside, hovedsøk, Banken og sitemap.
+
+## Forenklet UX og tilgjengelighet
+
+- Forsiden viser seks mest brukte kalkulatorer i stedet for alle verktøyene samtidig.
+- De 49 verktøyene er samlet i seks sammenleggbare kategorier.
+- Søket viser direkte forslag mens brukeren skriver.
+- Alle undersider har en enkel «Til forsiden»-lenke uten full toppmeny.
+- Tekst, skjemaer og glassflater har fått tydeligere kontrast og større klikkflater.
+- Vannbakgrunnen er tonet ned, begrenset til forsiden og kan deaktiveres med «Reduser bevegelse».
+- Systeminnstillingen `prefers-reduced-motion` respekteres automatisk.

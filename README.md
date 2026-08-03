@@ -86,3 +86,7 @@ Alle sider bruker den samme Liquid Glass-designprofilen i `assets/styles.css`. F
 `/rentesjekken/` kombinerer en lokal sammenligningsmotor med Finansportalens offisielle, integrerbare boliglånsoversikt. Besøkeren legger inn dagens lån og aktuelle banktilbud. Regninga beregner månedspris, total kostnad, mulig besparelse, brytningspunkt og en ferdig forhandlingsmelding.
 
 Rådata fra Finansportalen er ikke hentet direkte. Maskinell feed krever distribusjonsavtale og autentisering. Se `RENTESJEKKEN-DATA.md`.
+
+## UX-struktur
+
+Forsiden er organisert rundt søk, seks mest brukte verktøy og seks sammenleggbare kategorier. Kalkulatorsidene bruker en liten «Til forsiden»-lenke fremfor en full navigasjonslinje. Bevegelse kan reduseres fra forsiden, og brukerens valg lagres lokalt i nettleseren.
