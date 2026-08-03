@@ -837,3 +837,283 @@ h1, h2, h3, p, li, dt, dd, strong, small, a, label { overflow-wrap: anywhere; }
 .home-search-hint{margin:9px 4px 0!important;font-size:.78rem!important;color:var(--muted)!important}
 .home-search-results:empty{display:none}
 @media(max-width:560px){.home-search-box{grid-template-columns:minmax(0,1fr) 82px}.home-search-box button{min-width:0}.home-search-hint{font-size:.72rem!important}}
+
+
+/* =========================================================
+   Regninga UI refresh — fresh, light and consistent
+   ========================================================= */
+:root {
+  color-scheme: light;
+  --bg: #f7f7fc;
+  --bg-deep: #f0eff8;
+  --surface: #ffffff;
+  --surface-2: #f2f0fb;
+  --surface-3: #e9e5f7;
+  --text: #211d32;
+  --muted: #696579;
+  --muted-2: #8b8799;
+  --border: rgba(44,35,77,.11);
+  --border-strong: rgba(44,35,77,.19);
+  --brand: #6c4cff;
+  --brand-strong: #8067ff;
+  --brand-dark: #2a2054;
+  --cyan: #0fb9c7;
+  --violet: #8f6cff;
+  --accent: #ff7a5c;
+  --danger: #e24d68;
+  --mint: #3bcf9a;
+  --sun: #ffd35c;
+  --shadow: 0 22px 60px rgba(48,37,91,.11);
+  --glow: 0 0 0 1px rgba(108,76,255,.11), 0 20px 52px rgba(108,76,255,.12);
+  --radius: 25px;
+  --radius-sm: 16px;
+}
+
+body {
+  color: var(--text);
+  background:
+    radial-gradient(circle at 5% -6%, rgba(255,122,92,.15), transparent 27rem),
+    radial-gradient(circle at 96% 5%, rgba(108,76,255,.15), transparent 32rem),
+    radial-gradient(circle at 55% 110%, rgba(59,207,154,.11), transparent 34rem),
+    linear-gradient(180deg, #fbfaff 0%, var(--bg) 52%, #ffffff 100%);
+}
+body::before {
+  opacity: .52;
+  background-image: radial-gradient(rgba(70,55,115,.12) .65px, transparent .65px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(to bottom, #000, transparent 72%);
+}
+
+.site-header {
+  background: rgba(255,255,255,.78);
+  border-color: rgba(44,35,77,.08);
+  box-shadow: 0 5px 24px rgba(50,38,91,.05);
+}
+.logo { color: var(--text); }
+.logo-mark {
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand), #9a7cff 62%, #ff8b6f);
+  box-shadow: 0 11px 26px rgba(108,76,255,.25);
+}
+.nav a { color: #6b667b; }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--brand-dark); background: #f1eefe; }
+.nav a[aria-current="page"] { box-shadow: inset 0 0 0 1px rgba(108,76,255,.13); }
+.nav-toggle { border-color: var(--border); background: #fff; }
+.nav-toggle > span:not(.sr-only) { background: var(--text); }
+
+.hero { padding: 82px 0 58px; }
+.hero h1 em { color: var(--brand); }
+.hero p, .page-intro p { color: var(--muted); }
+.eyebrow {
+  color: var(--brand);
+  background: #f0edff;
+  border-color: #ddd5ff;
+}
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand), #8b6dff);
+  box-shadow: 0 14px 30px rgba(108,76,255,.23);
+}
+.btn-primary:hover { background: linear-gradient(135deg, #5e3df2, #795bff); box-shadow: 0 18px 38px rgba(108,76,255,.29); }
+.btn-secondary { color: #4b465d; background: #f0eef7; border-color: #e2deee; }
+.btn-secondary:hover { background: #e8e4f3; }
+
+.hero-panel {
+  border-color: rgba(108,76,255,.15);
+  background: linear-gradient(145deg, rgba(255,255,255,.94), rgba(245,242,255,.9));
+  box-shadow: 0 28px 75px rgba(68,48,132,.15);
+}
+.hero-panel::before { background: rgba(255,122,92,.22); }
+.hero-panel::after { background: rgba(59,207,154,.18); }
+.hero-panel-inner {
+  color: #fff;
+  min-height: 350px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(255,213,92,.26), transparent 18rem),
+    linear-gradient(145deg, #2a2054 0%, #563bc0 58%, #704eff 100%);
+  border-color: rgba(255,255,255,.13);
+}
+.hero-panel-inner::after { background: radial-gradient(circle, rgba(59,207,154,.28), transparent 68%); }
+.hero-chip { color: #fff; background: rgba(255,255,255,.13); border-color: rgba(255,255,255,.18); }
+.hero-chip::before { background: var(--sun); box-shadow: 0 0 12px var(--sun); }
+.hero-kicker, .hero-label, .hero-mini span { color: rgba(255,255,255,.71); }
+.hero-mini { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.14); }
+
+.home-search-box { background: #fff; border-color: #ddd8ec; box-shadow: 0 15px 40px rgba(50,38,91,.09); }
+.home-search-box:focus-within { border-color: rgba(108,76,255,.55); box-shadow: 0 0 0 5px rgba(108,76,255,.09), 0 18px 44px rgba(50,38,91,.12); }
+.home-search-box input { color: var(--text); background: transparent; }
+.home-search-box input::placeholder { color: #9691a4; }
+.home-search-box button { color: #fff; background: var(--brand); }
+.home-search-box button:hover { background: #5c3bed; }
+.home-search-hint { color: var(--muted-2); }
+
+.section-muted { background: rgba(238,235,249,.55); border-block-color: rgba(44,35,77,.07); }
+.calc-card {
+  min-height: 250px;
+  background: rgba(255,255,255,.9);
+  border-color: rgba(44,35,77,.1);
+  box-shadow: 0 13px 38px rgba(48,37,91,.075);
+}
+.calc-card::after { background: radial-gradient(circle, rgba(255,122,92,.17), transparent 70%); }
+.calc-card:nth-child(3n+2)::after { background: radial-gradient(circle, rgba(15,185,199,.16), transparent 70%); }
+.calc-card:nth-child(3n)::after { background: radial-gradient(circle, rgba(108,76,255,.16), transparent 70%); }
+.calc-card:hover {
+  border-color: rgba(108,76,255,.28);
+  background: #fff;
+  box-shadow: 0 25px 60px rgba(48,37,91,.14);
+}
+.calc-icon { color: #ef6247; background: #fff0ec; border-color: #ffd7ce; }
+.calc-card:nth-child(3n+2) .calc-icon { color: #068c98; background: #e9fbfc; border-color: #c7f0f2; }
+.calc-card:nth-child(3n) .calc-icon { color: var(--brand); background: #f0edff; border-color: #ddd5ff; }
+.calc-link { color: var(--brand); }
+.new-badge {
+  display: inline-flex; align-items: center; width: fit-content; margin-left: 8px;
+  padding: 4px 8px; border-radius: 999px; color: #135b45; background: #dcf8ee;
+  font-size: .66rem; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; vertical-align: middle;
+}
+
+.page-intro { padding: 64px 0 32px; }
+.form-card, .result-card, .info-card, .electricity-price-card,
+.electricity-calculator-card, .pension-start-card, .pension-mode-card,
+.pension-step, .pension-chart-card, .scenario-card, .source-card,
+.simple-next-step-card, .steps-grid article, .bank-search-card, .bank-message,
+.work-history-table, .break-even-card {
+  background: rgba(255,255,255,.93);
+  border-color: var(--border);
+  box-shadow: 0 15px 48px rgba(48,37,91,.08);
+}
+.form-card, .result-card, .info-card, .electricity-price-card { color: var(--text); }
+.result-card { box-shadow: var(--glow); }
+label, .pension-page label { color: #393447; }
+input, select, textarea,
+.pension-page input, .pension-page select,
+.bank-search-form textarea, .work-history-row input {
+  color: var(--text);
+  background: #fbfaff;
+  border-color: #ddd9e9;
+  color-scheme: light;
+}
+input:hover, select:hover, textarea:hover { border-color: #c8c1da; }
+input:focus, select:focus, textarea:focus,
+.pension-page input:focus, .pension-page select:focus,
+.bank-search-form textarea:focus {
+  background: #fff;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px rgba(108,76,255,.1);
+}
+.input-suffix, .pension-page .input-suffix { color: #817c90; }
+.form-section legend { border-color: var(--border); }
+.result-main, .mini-result {
+  color: #fff;
+  background:
+    radial-gradient(circle at 100% 10%, rgba(255,211,92,.25), transparent 12rem),
+    linear-gradient(140deg, #5e3ff0 0%, #7b5cff 55%, #926fff 100%);
+  box-shadow: 0 18px 42px rgba(108,76,255,.19);
+}
+.result-main .label, .result-main .sub, .mini-result span, .mini-result small { color: rgba(255,255,255,.72); }
+.result-main::after { color: #fff; }
+.result-row { border-color: var(--border); }
+.result-row dt, .form-lead, .result-lead, .small-print, .field-help { color: var(--muted); }
+.compare-box, .partner-card, .price-stat, .pension-phase-grid > div {
+  background: #f8f7fc;
+  border-color: var(--border);
+}
+.notice { color: #655531; background: #fff8df; border-left-color: var(--sun); }
+
+.ad-slot { color: var(--muted-2); background: rgba(255,255,255,.58); border-color: rgba(68,57,98,.18); }
+.ad-label { color: #9490a0; }
+
+.price-summary {
+  color: #fff;
+  background: linear-gradient(145deg, #292052, #6547dc);
+  border-color: rgba(255,255,255,.12);
+}
+.price-summary strong { color: #8bf0cb; }
+.price-summary small, .price-stat span { color: rgba(255,255,255,.68); }
+.calc-tab { color: #655f74; background: #f2f0f8; border-color: #dfdae9; }
+.calc-tab:hover { color: var(--brand); border-color: #cfc5f2; }
+.calc-tab.active { color: #fff; background: var(--brand); border-color: var(--brand); }
+
+.pension-trust-row span { color: #514c60; background: #fff; border-color: var(--border); }
+.pension-start-card { background: linear-gradient(145deg, #f1eeff, #fff); border-color: #dcd5ff; }
+.pension-start-card p, .pension-start-card li { color: var(--muted); }
+.pension-start-card::after { background: radial-gradient(circle, rgba(108,76,255,.16), transparent 68%); }
+.step-number, .step-badge { color: #fff; background: var(--brand); }
+.pension-step summary, .simple-options summary { color: var(--text); }
+.pension-step summary small, .pension-mode-card p, .simple-next-step-card p { color: var(--muted); }
+.pension-mode-switch { background: #eeebf7; }
+.pension-mode-switch a { color: #686273; }
+.pension-mode-switch a.active { color: #fff; background: var(--brand); }
+.pension-mode-switch a.active small { color: rgba(255,255,255,.72); }
+.pension-result-card { background: #fff; }
+.pension-main-result .value { color: var(--brand); }
+.scenario-card.recommended { border-color: rgba(108,76,255,.34); background: #f5f2ff; }
+.scenario-tag, .recommended .scenario-tag { color: #fff; background: var(--brand); }
+.chart-tooltip { color: #fff; background: #2a2341; }
+.chart-tooltip span { color: rgba(255,255,255,.7); }
+
+.bank-page { background: transparent; }
+.bank-clean-hero { background: transparent; }
+.bank-clean-brand, .bank-clean-hero h1 { color: var(--text); }
+.bank-clean-hero > .container > p, .bank-disclaimer { color: var(--muted); }
+.bank-avatar { color: #fff; background: linear-gradient(135deg, var(--brand), #8f70ff); }
+.bank-message-user { color: #fff; background: var(--brand); }
+.bank-results a, .bank-answer-links a { color: var(--brand); }
+.bank-suggestions button { color: #514b61; background: #fff; border-color: var(--border); }
+.bank-suggestions button:hover { color: var(--brand); border-color: #cfc5f2; background: #f7f5ff; }
+.bank-search-button { color: #fff; background: var(--brand); }
+.bank-search-meta, .bank-trust { color: var(--muted); }
+
+.work-less-status[data-level="positive"] { color: #16664e; background: #e2f8ef; }
+.work-less-status[data-level="warning"] { color: #775c12; background: #fff5cf; }
+.work-less-status[data-level="danger"] { color: #8d2940; background: #ffe8ed; }
+.work-less-status[data-level="neutral"] { color: #5e5870; background: #f0eef6; }
+
+.content-page p, .content-page li, .legal-updated { color: var(--muted); }
+.legal-content a, .contact-card a, .contact-email { color: var(--brand); }
+.footer { color: var(--muted); background: rgba(255,255,255,.72); border-color: var(--border); }
+.footer a { color: var(--text); }
+.footer a:hover { color: var(--brand); }
+.footer-brand p, .footer-note p { color: var(--muted); }
+.footer-links strong, .footer-note strong { color: var(--text); }
+
+/* New calculators */
+.new-calculator-page .page-intro h1 { max-width: 850px; }
+.new-calculator-page .calculator-shell { padding-top: 8px; }
+.new-calculator-page .form-card { overflow: hidden; }
+.new-calculator-page .form-card h2 { margin-bottom: 4px; }
+.new-calculator-page .result-card { overflow: hidden; }
+.new-calculator-page .result-card::before {
+  content: ""; position: absolute; width: 210px; height: 210px; right: -120px; top: -125px;
+  border-radius: 50%; background: rgba(108,76,255,.09); pointer-events: none;
+}
+.new-result-kicker { color: var(--brand); font-size: .76rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.new-result-title { margin: 7px 0 4px; font-size: clamp(1.75rem, 4vw, 2.65rem); line-height: 1.05; letter-spacing: -.05em; }
+.new-result-copy { color: var(--muted); }
+.new-stat-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; margin-top: 18px; }
+.new-stat { padding: 15px; border: 1px solid var(--border); border-radius: 17px; background: #f8f7fc; }
+.new-stat span { display: block; color: var(--muted); font-size: .78rem; margin-bottom: 4px; }
+.new-stat strong { display: block; font-size: 1.08rem; letter-spacing: -.02em; }
+.new-warning { display: none; margin-top: 14px; padding: 13px 14px; border-radius: 14px; color: #7c2c40; background: #ffe9ee; border: 1px solid #ffd1dc; }
+.privacy-note { margin-top: 20px; padding: 14px 15px; border-radius: 15px; color: #5b5568; background: #f5f3fa; border: 1px solid var(--border); font-size: .85rem; }
+.privacy-note strong { color: var(--brand); }
+.form-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.featured-card { border-color: rgba(108,76,255,.17); }
+.featured-card:nth-child(1) .calc-icon { color: #fff; background: linear-gradient(135deg,#6c4cff,#9073ff); border-color: transparent; }
+.featured-card:nth-child(2) .calc-icon { color: #fff; background: linear-gradient(135deg,#ff7359,#ff9c70); border-color: transparent; }
+.featured-card:nth-child(3) .calc-icon { color: #fff; background: linear-gradient(135deg,#09aebc,#3bcf9a); border-color: transparent; }
+
+@media (max-width: 900px) {
+  .site-header .nav { display: none; position: absolute; left: 12px; right: 12px; top: calc(100% + 8px); max-width: none; padding: 10px; flex-direction: column; overflow: visible; background: rgba(255,255,255,.98); border: 1px solid var(--border); border-radius: 18px; box-shadow: var(--shadow); }
+  .site-header .nav[data-open="true"] { display: flex; }
+  .site-header .nav a { width: 100%; padding: 11px 12px; }
+  .nav-toggle { display: inline-flex; }
+}
+@media (max-width: 720px) {
+  .logo span:last-child { display: inline; }
+  .hero { padding-top: 56px; }
+  .hero-panel { max-width: none; }
+  .new-stat-grid { grid-template-columns: 1fr; }
+  .form-actions { flex-direction: column; }
+  .form-actions .btn { width: 100%; }
+}

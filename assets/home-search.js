@@ -1,12 +1,14 @@
 (() => {
   'use strict';
-
   const form = document.getElementById('homeSearchForm');
   const input = document.getElementById('homeSearchInput');
   const results = document.getElementById('homeSearchResults');
   if (!form || !input || !results) return;
 
   const pages = [
+    {title:'Leie eller kjøpe',url:'leie-eller-kjope/',keys:['leie eller kjøpe','leie','kjøpe bolig','eie bolig','husleie','boligkjøp']},
+    {title:'Flytte hjemmefra',url:'flytte-hjemmefra/',keys:['flytte hjemmefra','flytte ut','depositum','månedsbudsjett','studentbudsjett','første bolig']},
+    {title:'Gjeldsfri',url:'gjeldsfri/',keys:['gjeldsfri','gjeld','kredittkort','forbrukslån','nedbetaling','renter','sluttdato']},
     {title:'Pensjon',url:'pensjon/',keys:['pensjon','afp','folketrygd','nav','tjenestepensjon','pensjonere','pensjonsalder','gå av']},
     {title:'Jobbe mindre',url:'jobb-mindre/',keys:['jobbe mindre','80 prosent','80 %','redusert stilling','fritid','deltid','stillingsprosent','kortere uke']},
     {title:'Bolig',url:'bolig/',keys:['bolig','boliglån','rente','hus','leilighet','felleskostnad','egenkapital','bokostnad','lån']},
@@ -17,9 +19,7 @@
     {title:'Barn',url:'barn/',keys:['barn','baby','barnehage','sfo','bleier','familie']},
     {title:'Hund',url:'hund/',keys:['hund','valp','veterinær','hundefôr','hundemat']}
   ];
-
   const normalize = value => value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-
   function matches(query) {
     const q = normalize(query.trim());
     const words = q.split(/\s+/).filter(word => word.length > 1);
@@ -35,7 +35,6 @@
       return {...page, score};
     }).filter(page => page.score > 0).sort((a, b) => b.score - a.score);
   }
-
   form.addEventListener('submit', event => {
     event.preventDefault();
     const query = input.value.trim();

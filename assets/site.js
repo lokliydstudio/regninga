@@ -7,24 +7,6 @@
 
   const button = document.querySelector('.nav-toggle');
   const nav = document.getElementById('main-nav');
-
-  if (nav && !nav.querySelector('a[href*="jobb-mindre"]')) {
-    const link = document.createElement('a');
-    link.href = '/jobb-mindre/';
-    link.textContent = 'Jobb mindre';
-    if (window.location.pathname.startsWith('/jobb-mindre')) link.setAttribute('aria-current', 'page');
-    nav.appendChild(link);
-  }
-
-
-  if (nav && !nav.querySelector('a[href*="banken"]')) {
-    const bankLink = document.createElement('a');
-    bankLink.href = '/banken/';
-    bankLink.textContent = 'Banken';
-    if (window.location.pathname.startsWith('/banken')) bankLink.setAttribute('aria-current', 'page');
-    nav.appendChild(bankLink);
-  }
-
   if (!button || !nav) return;
 
   const closeMenu = () => {
@@ -36,15 +18,16 @@
   };
 
   button.addEventListener('click', () => {
-    const open = button.getAttribute('aria-expanded') === 'true';
-    if (open) closeMenu();
-    else {
-      button.setAttribute('aria-expanded', 'true');
-      nav.dataset.open = 'true';
-      document.body.classList.add('nav-open');
-      const label = button.querySelector('.sr-only');
-      if (label) label.textContent = 'Lukk meny';
+    const isOpen = button.getAttribute('aria-expanded') === 'true';
+    if (isOpen) {
+      closeMenu();
+      return;
     }
+    button.setAttribute('aria-expanded', 'true');
+    nav.dataset.open = 'true';
+    document.body.classList.add('nav-open');
+    const label = button.querySelector('.sr-only');
+    if (label) label.textContent = 'Lukk meny';
   });
 
   nav.addEventListener('click', (event) => {

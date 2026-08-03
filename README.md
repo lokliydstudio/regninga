@@ -42,3 +42,11 @@ Manuelle annonseenheter kan senere aktiveres i `assets/ads-config.js` ved å leg
 - `assets/app.js` – standardkalkulatorer
 - `assets/strom.js` – strømpris og strømkalkulatorer
 - `assets/pensjon.js` – pensjonsscenarioer
+
+## Nye kalkulatorer
+
+- `/leie-eller-kjope/`
+- `/flytte-hjemmefra/`
+- `/gjeldsfri/`
+
+Alle sider bruker den felles designprofilen i `assets/styles.css`.
