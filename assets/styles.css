@@ -1744,3 +1744,18 @@ body.has-waterworld::before {
     opacity: .16;
   }
 }
+
+
+/* Header removed: keep the first screen calm and compact */
+body > main { position: relative; z-index: 1; }
+.hero { padding-top: 64px; }
+.page-intro { padding-top: 58px; }
+.content-page { padding-top: 54px; }
+.bank-clean-hero { padding-top: 58px; }
+
+@media (max-width: 720px) {
+  .hero { padding-top: 42px; }
+  .page-intro { padding-top: 38px; }
+  .content-page { padding-top: 38px; }
+  .bank-clean-hero { padding-top: 38px; }
+}
