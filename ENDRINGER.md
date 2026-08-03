@@ -80,5 +80,7 @@ Alle er koblet til forsiden, hovedsøket, Banken og sitemap.xml.
 - Søket viser direkte forslag mens brukeren skriver.
 - Alle undersider har en enkel «Til forsiden»-lenke uten full toppmeny.
 - Tekst, skjemaer og glassflater har fått tydeligere kontrast og større klikkflater.
-- Vannbakgrunnen er tonet ned, begrenset til forsiden og kan deaktiveres med «Reduser bevegelse».
+- Vannbakgrunnen med bobler og flytende regninger er gjenopprettet uten egen bevegelsesbryter.
 - Systeminnstillingen `prefers-reduced-motion` respekteres automatisk.
+
+- Heroen på forsiden er gjenopprettet i en roligere todelt variant med søk som hovedhandling.
