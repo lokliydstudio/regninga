@@ -16,20 +16,20 @@ Publisher-koden for `ca-pub-8834902676708293` ligger i `<head>` på alle HTML-si
 
 Før annonser vises til besøkende i EØS, Storbritannia og Sveits, publiser en europeisk samtykkemelding under **AdSense → Personvern og meldinger** med Googles sertifiserte CMP.
 
-Manuelle annonseenheter kan senere aktiveres i `assets/ads-config.js` ved å legge inn slot-ID-er og sette `manualPlacements` til `true`. Tomme annonsefelt er skjult.
+Manuelle annonseenheter er aktivert i `assets/ads-config.js` med den oppgitte slot-ID-en. Annonsefeltene skjules automatisk dersom konfigurasjonen mangler eller AdSense-scriptet ikke lastes.
 
 ## Innhold
 
-- `/bolig/`
-- `/bil/`
-- `/pendling/`
-- `/strom/`
-- `/samboer/`
-- `/hund/`
-- `/barn/`
-- `/pensjon/`
-- `personvern.html`
-- `kontakt.html`
+Nettstedet inneholder 23 innganger/verktøy, blant annet:
+
+- `/leie-eller-kjope/`, `/flytte-hjemmefra/` og `/gjeldsfri/`
+- `/buffer/`, `/abonnementssjekken/` og `/matbudsjett/`
+- `/ny-jobb/`, `/jobb-mindre/` og `/pensjon/`
+- `/oppussing/`, `/hvor-mye-bolig/` og `/bolig/`
+- `/bryllup/`, `/feriebudsjett/` og `/nytt-eller-brukt/`
+- `/forsikringssjekken/`, `/bil/`, `/pendling/` og `/strom/`
+- `/samboer/`, `/hund/`, `/barn/` og `/banken/`
+- `personvern.html` og `kontakt.html`
 
 ## Viktige filer
 
@@ -42,11 +42,8 @@ Manuelle annonseenheter kan senere aktiveres i `assets/ads-config.js` ved å leg
 - `assets/app.js` – standardkalkulatorer
 - `assets/strom.js` – strømpris og strømkalkulatorer
 - `assets/pensjon.js` – pensjonsscenarioer
+- `assets/new-calculators.js` – beregninger for de 13 nyeste kalkulatorene
 
-## Nye kalkulatorer
+## Felles design og funksjonalitet
 
-- `/leie-eller-kjope/`
-- `/flytte-hjemmefra/`
-- `/gjeldsfri/`
-
-Alle sider bruker den felles designprofilen i `assets/styles.css`.
+Alle sider bruker den samme Liquid Glass-designprofilen i `assets/styles.css`. Forsiden, hovedsøket, Banken og `sitemap.xml` inneholder alle kalkulatorene. Beregningene skjer lokalt i nettleseren.

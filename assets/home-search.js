@@ -6,6 +6,16 @@
   if (!form || !input || !results) return;
 
   const pages = [
+    {title:'Bufferkalkulator',url:'buffer/',keys:['buffer','bufferkonto','nødsparing','økonomisk trygghet','uforutsette utgifter']},
+    {title:'Abonnementssjekken',url:'abonnementssjekken/',keys:['abonnement','streaming','mobil','trening','apper','faste trekk']},
+    {title:'Matbudsjett',url:'matbudsjett/',keys:['matbudsjett','mat','dagligvarer','takeaway','matsvinn','husholdning']},
+    {title:'Ny jobb – lønner det seg?',url:'ny-jobb/',keys:['ny jobb','bytte jobb','lønn','pendling','fritid','jobbgoder']},
+    {title:'Oppussingskalkulator',url:'oppussing/',keys:['oppussing','renovere','materialer','håndverker','prosjektbudsjett']},
+    {title:'Hvor mye bolig har du råd til?',url:'hvor-mye-bolig/',keys:['hvor mye bolig','råd til bolig','boligpris','låneramme','egenkapital','rentestress']},
+    {title:'Bryllupskalkulator',url:'bryllup/',keys:['bryllup','gifte seg','gjester','bryllupsbudsjett','fest']},
+    {title:'Feriebudsjett',url:'feriebudsjett/',keys:['ferie','reise','feriebudsjett','hotell','fly','spare til ferie']},
+    {title:'Kjøpe nytt eller brukt?',url:'nytt-eller-brukt/',keys:['nytt eller brukt','brukt','nytt','verditap','eierkostnad','kjøpe brukt']},
+    {title:'Forsikringssjekken',url:'forsikringssjekken/',keys:['forsikring','forsikringer','egenandel','overlapp','innbo','reise']},
     {title:'Leie eller kjøpe',url:'leie-eller-kjope/',keys:['leie eller kjøpe','leie','kjøpe bolig','eie bolig','husleie','boligkjøp']},
     {title:'Flytte hjemmefra',url:'flytte-hjemmefra/',keys:['flytte hjemmefra','flytte ut','depositum','månedsbudsjett','studentbudsjett','første bolig']},
     {title:'Gjeldsfri',url:'gjeldsfri/',keys:['gjeldsfri','gjeld','kredittkort','forbrukslån','nedbetaling','renter','sluttdato']},

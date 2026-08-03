@@ -14,3 +14,19 @@
 - Subtil parallax i bakgrunn og hero, med støtte for redusert bevegelse.
 - Forbedret header, kort, skjemaer, resultater og footer.
 - Apple touch-ikon lagt til på alle sider.
+
+
+## Ti nye kalkulatorer
+
+- `buffer/` – Bufferkalkulator
+- `abonnementssjekken/` – Abonnementssjekken
+- `matbudsjett/` – Matbudsjett
+- `ny-jobb/` – Ny jobb – lønner det seg?
+- `oppussing/` – Oppussingskalkulator
+- `hvor-mye-bolig/` – Hvor mye bolig har du råd til?
+- `bryllup/` – Bryllupskalkulator
+- `feriebudsjett/` – Feriebudsjett
+- `nytt-eller-brukt/` – Kjøpe nytt eller brukt?
+- `forsikringssjekken/` – Forsikringssjekken
+
+Alle er lagt til på forsiden, i søket, i Banken og i sitemap.xml.

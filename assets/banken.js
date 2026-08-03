@@ -7,6 +7,16 @@
   const results = document.getElementById('bankResults');
 
   const pages = [
+    {title:'Bufferkalkulator',url:'../buffer/',keys:['buffer','bufferkonto','nødsparing','økonomisk trygghet','uforutsette utgifter'],desc:'Finn et personlig mål for økonomisk buffer.'},
+    {title:'Abonnementssjekken',url:'../abonnementssjekken/',keys:['abonnement','streaming','mobil','trening','apper','faste trekk'],desc:'Se månedspris, årspris og mulig besparelse.'},
+    {title:'Matbudsjett',url:'../matbudsjett/',keys:['matbudsjett','mat','dagligvarer','takeaway','matsvinn','husholdning'],desc:'Samle dagligvarer og mat ute i ett budsjett.'},
+    {title:'Ny jobb – lønner det seg?',url:'../ny-jobb/',keys:['ny jobb','bytte jobb','lønn','pendling','fritid','jobbgoder'],desc:'Sammenlign to jobber i kroner og tid.'},
+    {title:'Oppussingskalkulator',url:'../oppussing/',keys:['oppussing','renovere','materialer','håndverker','prosjektbudsjett'],desc:'Beregn prosjektpris, buffer og finansiering.'},
+    {title:'Hvor mye bolig har du råd til?',url:'../hvor-mye-bolig/',keys:['hvor mye bolig','råd til bolig','boligpris','låneramme','egenkapital','rentestress'],desc:'Finn et komfortabelt prisnivå med rentestress.'},
+    {title:'Bryllupskalkulator',url:'../bryllup/',keys:['bryllup','gifte seg','gjester','bryllupsbudsjett','fest'],desc:'Lag totalbudsjett og spareplan for bryllup.'},
+    {title:'Feriebudsjett',url:'../feriebudsjett/',keys:['ferie','reise','feriebudsjett','hotell','fly','spare til ferie'],desc:'Planlegg totalpris og sparing til ferien.'},
+    {title:'Kjøpe nytt eller brukt?',url:'../nytt-eller-brukt/',keys:['nytt eller brukt','brukt','nytt','verditap','eierkostnad','kjøpe brukt'],desc:'Sammenlign total eierkostnad for nytt og brukt.'},
+    {title:'Forsikringssjekken',url:'../forsikringssjekken/',keys:['forsikring','forsikringer','egenandel','overlapp','innbo','reise'],desc:'Samle premier, egenandeler og mulig overlapp.'},
     {title:'Pensjon',url:'../pensjon/',keys:['pensjon','afp','folketrygd','nav','tjenestepensjon','pensjonere','pensjonsalder','gå av'],desc:'Beregn folketrygd, AFP, egen pensjon og ulike uttaksvalg.'},
     {title:'Jobbe mindre',url:'../jobb-mindre/',keys:['jobbe mindre','80 prosent','80 %','redusert stilling','fritid','deltid','stillingsprosent','kortere uke'],desc:'Se hva redusert stilling koster og hvor mye fritid du får.'},
     {title:'Bolig',url:'../bolig/',keys:['bolig','boliglån','rente','hus','leilighet','felleskostnad','egenkapital','bokostnad','lån'],desc:'Finn den reelle månedskostnaden for boligen.'},
