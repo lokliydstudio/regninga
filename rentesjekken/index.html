@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Sammenlign boliglånsrenten du har med konkrete banktilbud. Se månedlig besparelse, total kostnad, brytningspunkt og hva banken må matche." name="description"/>
+<meta content="#eef5ff" name="theme-color"/>
+<meta content="light" name="color-scheme"/>
+<meta content="index, follow, max-image-preview:large" name="robots"/>
+<title>Rentesjekken – sammenlign boliglånsrenter | Regninga</title>
+<link href="https://regninga.no/rentesjekken/" rel="canonical"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="../assets/styles.css" rel="stylesheet"/>
+<script src="../assets/ads-config.js"></script>
+<script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8834902676708293"></script>
+<meta content="Rentesjekken – sammenlign boliglånsrenter" property="og:title"/>
+<meta content="Sjekk om dagens boliglånsrente er konkurransedyktig og se hva du kan spare ved å forhandle eller bytte bank." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://regninga.no/rentesjekken/" property="og:url"/>
+<meta content="summary" name="twitter:card"/>
+</head>
+<body class="rentesjekken-page">
+<a class="skip-link" href="#innhold">Hopp til innhold</a>
+<header class="site-header"><div class="container header-inner">
+<a aria-label="Regninga – forsiden" class="logo" href="../"><span aria-hidden="true" class="logo-mark"><img alt="" decoding="async" height="40" src="../assets/logo-mark.svg" width="40"/></span><span>Regninga</span></a>
+<button aria-controls="main-nav" aria-expanded="false" class="nav-toggle" type="button"><span class="sr-only">Åpne meny</span><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
+<nav aria-label="Hovedmeny" class="nav" id="main-nav"><a href="../#kalkulatorer">Kalkulatorer</a><a aria-current="page" href="./">Rentesjekken</a><a href="../pensjon/">Pensjon</a><a href="../banken/">Banken</a></nav>
+</div></header>
+<main id="innhold">
+<section class="page-intro radar-intro"><div class="container"><span class="eyebrow">Boliglån · markedssjekk</span><h1>Betaler du for mye i rente?</h1><p>Legg inn lånet du har og tilbudene du finner. Rentesjekken rangerer dem etter din faktiske kostnad – ikke bare reklamerenten.</p><div class="radar-trust-row"><span>✓ Ingen innlogging</span><span>✓ Tallene blir i nettleseren</span><span>✓ Offisiell markedsoversikt nederst</span></div></div></section>
+
+<section aria-label="Annonseplass" class="container ad-section" hidden><div aria-label="Annonse" class="ad-slot ad-slot-horizontal" data-ad-placement="top"><span class="ad-label">Annonse</span></div></section>
+
+<section class="container radar-workspace">
+<form class="form-card radar-form" id="rentesjekkenForm">
+<div class="radar-form-heading"><div><span class="eyebrow">1. Ditt lån</span><h2>Hva betaler du i dag?</h2></div><span class="radar-live-pill">Oppdateres direkte</span></div>
+<p class="form-lead">Bruk nominell rente til beregningen. Effektiv rente vises som kontrollpunkt.</p>
+<fieldset class="form-section"><legend>Dagens boliglån</legend><div class="field-grid">
+<div class="field"><label for="currentBank">Bank</label><input id="currentBank" autocomplete="organization" value="Min bank"/></div>
+<div class="field"><label for="loanBalance">Restgjeld</label><div class="input-wrap"><input id="loanBalance" inputmode="decimal" min="0" step="10000" type="number" value="3000000"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="homeValue">Boligverdi</label><div class="input-wrap"><input id="homeValue" inputmode="decimal" min="0" step="50000" type="number" value="5000000"/><span class="input-suffix">kr</span></div></div>
+<div class="field"><label for="yearsLeft">Gjenstående løpetid</label><div class="input-wrap"><input id="yearsLeft" inputmode="numeric" min="1" max="40" step="1" type="number" value="25"/><span class="input-suffix">år</span></div></div>
+<div class="field"><label for="currentNominal">Nominell rente</label><div class="input-wrap"><input id="currentNominal" inputmode="decimal" min="0" max="30" step="0.01" type="number" value="5.85"/><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="currentEffective">Effektiv rente</label><div class="input-wrap"><input id="currentEffective" inputmode="decimal" min="0" max="30" step="0.01" type="number" value="6.08"/><span class="input-suffix">%</span></div></div>
+<div class="field"><label for="currentFee">Termingebyr</label><div class="input-wrap"><input id="currentFee" inputmode="decimal" min="0" step="1" type="number" value="65"/><span class="input-suffix">kr/mnd</span></div></div>
+</div></fieldset>
+
+<div class="radar-offer-header"><div><span class="eyebrow">2. Banktilbud</span><h2>Legg inn tilbudene du vil teste</h2><p>Eksempelverdiene er ikke markedsdata. Erstatt dem med tilbud fra bankene eller Finansportalen.</p></div><button class="btn btn-secondary radar-add-offer" id="addOffer" type="button">+ Legg til tilbud</button></div>
+<div class="offer-list" id="offerList"></div>
+<div class="form-actions"><button class="btn btn-primary" type="submit">Sammenlign tilbud</button><button class="btn btn-secondary" id="resetRadar" type="button">Tilbakestill</button></div>
+<div class="privacy-note"><strong>Privat:</strong> Opplysningene behandles lokalt og sendes ikke til Regninga.</div>
+</form>
+
+<aside aria-live="polite" class="result-card radar-result" id="radarResult">
+<div class="new-result-kicker">Din rentesjekk</div><h2 class="new-result-title" id="radarTitle">Sammenlign markedet</h2><p class="new-result-copy" id="radarSummary">Legg inn tilbudene du har fått, så ser du hva som faktisk er billigst for ditt lån.</p>
+<div class="result-main"><div class="label">Mulig besparelse per år</div><div class="value" id="annualSaving">–</div><div class="sub" id="bestOfferLabel">Sammenlignet med dagens lån</div></div>
+<div class="new-stat-grid radar-stat-grid"><div class="new-stat"><span>Dagens månedsbeløp</span><strong id="currentMonthly">–</strong></div><div class="new-stat"><span>Beste månedsbeløp</span><strong id="bestMonthly">–</strong></div><div class="new-stat"><span>Besparelse per måned</span><strong id="monthlySaving">–</strong></div><div class="new-stat"><span>Besparelse totalt</span><strong id="totalSaving">–</strong></div><div class="new-stat"><span>Byttekostnad tjent inn</span><strong id="breakEven">–</strong></div><div class="new-stat"><span>Belåningsgrad</span><strong id="loanToValue">–</strong></div></div>
+<div class="radar-verdict" id="radarVerdict"><span class="radar-verdict-icon">◎</span><div><strong>Start med dine tall</strong><p>Rentesjekken viser både månedspris, etableringskostnad og total kostnad.</p></div></div>
+<div class="notice">Resultatet er et anslag. Kontroller alltid effektiv rente, krav om medlemskap, lønnskonto, belåningsgrad og øvrige vilkår direkte hos banken.</div>
+</aside>
+</section>
+
+<section class="container radar-ranking-section" aria-labelledby="rankingTitle"><div class="section-heading compact-heading"><div><span class="eyebrow">3. Resultat</span><h2 id="rankingTitle">Tilbudene rangert</h2><p>Lavest beregnet totalkostnad kommer først.</p></div></div><div class="radar-table-wrap"><table class="radar-table"><thead><tr><th>Bank / tilbud</th><th>Nominell</th><th>Effektiv</th><th>Per måned</th><th>Første år</th><th>Totalt</th><th>Forskjell</th></tr></thead><tbody id="rankingBody"><tr><td colspan="7" class="radar-empty">Legg inn minst ett tilbud for å se rangeringen.</td></tr></tbody></table></div></section>
+
+<section class="container radar-negotiation" aria-labelledby="negotiationTitle"><div class="radar-negotiation-card"><div><span class="eyebrow">Forhandle først</span><h2 id="negotiationTitle">Gi banken mulighet til å matche</h2><p id="matchRateCopy">Når du har lagt inn et bedre tilbud, beregner vi omtrent hvilken rente banken din må tilby for å konkurrere.</p></div><div class="radar-message-box"><textarea id="negotiationMessage" readonly rows="7">Legg inn et konkurrerende tilbud for å lage en ferdig melding til banken.</textarea><button class="btn btn-primary" id="copyNegotiation" type="button">Kopier melding</button><span class="copy-feedback" id="copyFeedback" role="status"></span></div></div></section>
+
+<section class="container official-rates-section" aria-labelledby="officialRatesTitle"><div class="official-rates-heading"><div><span class="eyebrow">Oppdaterte markedspriser</span><h2 id="officialRatesTitle">Finn faktiske tilbud hos Finansportalen</h2><p>Oversikten under leveres direkte av Forbrukerrådet og viser bankenes priser til nye kunder. Finn relevante tilbud og legg dem inn i Rentesjekken over.</p></div><a class="btn btn-secondary" href="https://www.forbrukerradet.no/finansportalen/bank/lan/" rel="noopener noreferrer" target="_blank">Åpne Finansportalen ↗</a></div><div class="finansportalen-frame"><iframe height="1400" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.forbrukerradet.no/finansportalen/bank/iframe/lan/boliglan" style="border:0;min-width:320px" title="Finansportalen – Boliglån" width="100%"></iframe></div><p class="source-note">Markedsoversikten er Finansportalens integrerbare verktøy og kjøres uendret. Regningas egne beregninger gjøres separat i nettleseren.</p></section>
+
+<section class="container radar-how" aria-labelledby="howTitle"><div class="section-heading compact-heading"><div><span class="eyebrow">Slik bruker du resultatet</span><h2 id="howTitle">Tre raske steg</h2></div></div><div class="steps-grid"><article><span>1</span><h3>Sjekk belåningsgraden</h3><p>En oppdatert boligverdi kan påvirke hvilke betingelser du kvalifiserer for.</p></article><article><span>2</span><h3>Sammenlign hele tilbudet</h3><p>Se på nominell og effektiv rente, gebyrer, etablering og krav om andre produkter.</p></article><article><span>3</span><h3>Prut eller bytt</h3><p>Send meldingen til banken din. Bytt først dersom totalpakken faktisk blir bedre.</p></article></div></section>
+
+<section aria-label="Annonseplass" class="container ad-section" hidden><div aria-label="Annonse" class="ad-slot ad-slot-horizontal" data-ad-placement="inline"><span class="ad-label">Annonse</span></div></section>
+</main>
+<footer class="footer"><div class="container footer-main"><div class="footer-brand"><a class="logo" href="../"><span aria-hidden="true" class="logo-mark"><img alt="" decoding="async" height="40" src="../assets/logo-mark.svg" width="40"/></span><span>Regninga</span></a><p>Enkle kalkulatorer for smartere hverdagsøkonomi.</p></div><div class="footer-links"><strong>Regninga</strong><a href="../#kalkulatorer">Alle kalkulatorer</a><a href="./">Rentesjekken</a><a href="../personvern.html">Personvern</a><a href="../kontakt.html">Kontakt</a></div><div class="footer-note"><strong>Datakilde</strong><p>Bankoversikten leveres av Finansportalen. Regninga lagrer ikke låneopplysningene dine.</p></div></div><div class="container footer-bottom"><span>© <span data-current-year></span> Regninga</span><span>Gratis · Ingen innlogging</span></div></footer>
+<template id="offerTemplate"><article class="offer-card" data-offer><div class="offer-card-top"><div><span class="offer-number">Tilbud</span><h3 data-offer-title>Banktilbud</h3></div><button aria-label="Fjern tilbud" class="offer-remove" data-remove-offer type="button">×</button></div><div class="field-grid offer-field-grid"><div class="field offer-name-field"><label>Bank eller produkt</label><input data-field="name" value="Eksempeltilbud"/></div><div class="field"><label>Nominell rente</label><div class="input-wrap"><input data-field="nominal" min="0" max="30" step="0.01" type="number" value="5.45"/><span class="input-suffix">%</span></div></div><div class="field"><label>Effektiv rente</label><div class="input-wrap"><input data-field="effective" min="0" max="30" step="0.01" type="number" value="5.68"/><span class="input-suffix">%</span></div></div><div class="field"><label>Termingebyr</label><div class="input-wrap"><input data-field="fee" min="0" step="1" type="number" value="45"/><span class="input-suffix">kr/mnd</span></div></div><div class="field"><label>Etablering og flytting</label><div class="input-wrap"><input data-field="setup" min="0" step="100" type="number" value="0"/><span class="input-suffix">kr</span></div></div></div></article></template>
+<script src="../assets/ads.js"></script><script defer src="../assets/site.js"></script><script defer src="../assets/rentesjekken.js"></script>
+</body></html>

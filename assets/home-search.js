@@ -6,6 +6,7 @@
   if (!form || !input || !results) return;
 
   const pages = [
+    {title:'Rentesjekken',url:'rentesjekken/',keys:['rentesjekken','rentesammenligning','sammenligne renter','bankrente','boliglånsrente','bytte bank','prute rente','finansportalen']},
     {title:"Ekstra nedbetaling eller sparing?",url:"ekstra-nedbetaling-eller-sparing/",keys:["ekstra nedbetaling", "betale ned lån", "sparing", "fond", "høyrentekonto", "avdrag"]},
     {title:"Fastrente eller flytende rente?",url:"fastrente-eller-flytende/",keys:["fastrente", "flytende rente", "rentevalg", "bindingstid", "boliglån"]},
     {title:"Refinansieringskalkulator",url:"refinansiering/",keys:["refinansiering", "refinansiere", "bytte bank", "lavere rente", "samle lån"]},

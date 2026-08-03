@@ -1435,3 +1435,85 @@ input:focus, select:focus, textarea:focus,
   .ambient-orb, .hero-panel { transform:none !important; }
   *, *::before, *::after { scroll-behavior:auto !important; transition-duration:.01ms !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; }
 }
+
+
+/* Rentesjekken */
+.radar-intro .container { max-width: 980px; }
+.radar-intro h1 { max-width: 820px; }
+.radar-intro p { max-width: 760px; }
+.radar-trust-row { display:flex; flex-wrap:wrap; gap:10px 18px; margin-top:24px; color:#43516b; font-size:.92rem; font-weight:700; }
+.radar-trust-row span { display:inline-flex; align-items:center; gap:7px; padding:9px 13px; border:1px solid rgba(255,255,255,.84); border-radius:999px; background:rgba(255,255,255,.52); box-shadow:inset 0 1px 0 rgba(255,255,255,.9); backdrop-filter:blur(14px); }
+.radar-workspace { display:grid; grid-template-columns:minmax(0,1.48fr) minmax(320px,.72fr); gap:28px; align-items:start; padding-bottom:62px; }
+.radar-form-heading, .radar-offer-header, .official-rates-heading { display:flex; justify-content:space-between; gap:24px; align-items:flex-start; }
+.radar-form-heading h2, .radar-offer-header h2 { margin:.28rem 0 .2rem; }
+.radar-live-pill { flex:none; padding:8px 12px; border-radius:999px; color:#176247; background:rgba(220,248,238,.8); border:1px solid rgba(255,255,255,.88); font-size:.78rem; font-weight:800; }
+.radar-offer-header { margin-top:32px; padding-top:30px; border-top:1px solid rgba(73,89,119,.12); }
+.radar-offer-header p { margin:.35rem 0 0; max-width:620px; color:var(--muted); }
+.radar-add-offer { flex:none; }
+.offer-list { display:grid; gap:16px; margin-top:19px; }
+.offer-card { position:relative; padding:20px; border:1px solid rgba(255,255,255,.82); border-radius:23px; background:linear-gradient(145deg,rgba(255,255,255,.67),rgba(244,249,255,.48)); box-shadow:inset 0 1px 0 rgba(255,255,255,.94),0 12px 34px rgba(42,58,92,.07); }
+.offer-card-top { display:flex; justify-content:space-between; gap:16px; align-items:start; margin-bottom:16px; }
+.offer-card-top h3 { margin:4px 0 0; font-size:1.04rem; }
+.offer-number { color:#6458da; font-size:.73rem; font-weight:850; letter-spacing:.08em; text-transform:uppercase; }
+.offer-remove { width:34px; height:34px; border:1px solid rgba(73,89,119,.12); border-radius:50%; color:#6b7485; background:rgba(255,255,255,.62); font-size:1.35rem; line-height:1; cursor:pointer; }
+.offer-remove:hover { color:#a33737; background:rgba(255,239,239,.84); }
+.offer-field-grid { grid-template-columns:1.45fr repeat(4,minmax(120px,1fr)); }
+.offer-field-grid .field { min-width:0; }
+.radar-result { position:sticky; top:96px; }
+.radar-stat-grid { grid-template-columns:1fr 1fr; }
+.radar-verdict { display:flex; gap:13px; align-items:flex-start; margin-top:18px; padding:17px; border:1px solid rgba(255,255,255,.78); border-radius:19px; color:#37445b; background:rgba(255,255,255,.48); }
+.radar-verdict p { margin:4px 0 0; color:var(--muted); font-size:.9rem; line-height:1.45; }
+.radar-verdict-icon { display:grid; place-items:center; width:38px; height:38px; flex:none; border-radius:13px; color:#584cdb; background:rgba(238,235,255,.85); font-weight:900; }
+.radar-verdict.is-positive .radar-verdict-icon { color:#087f65; background:rgba(220,248,238,.9); }
+.radar-verdict.is-negative .radar-verdict-icon { color:#176247; background:rgba(220,248,238,.9); }
+.radar-ranking-section, .radar-negotiation, .official-rates-section, .radar-how { padding-bottom:72px; }
+.compact-heading { margin-bottom:22px; }
+.radar-table-wrap { overflow:auto; border:1px solid rgba(255,255,255,.82); border-radius:26px; background:rgba(255,255,255,.55); box-shadow:var(--glass-shadow); backdrop-filter:blur(22px) saturate(145%); }
+.radar-table { width:100%; min-width:880px; border-collapse:collapse; font-size:.91rem; }
+.radar-table th, .radar-table td { padding:16px 14px; text-align:right; border-bottom:1px solid rgba(73,89,119,.09); white-space:nowrap; }
+.radar-table th:first-child, .radar-table td:first-child { text-align:left; }
+.radar-table th { color:#536077; background:rgba(246,249,255,.58); font-size:.75rem; letter-spacing:.04em; text-transform:uppercase; }
+.radar-table td:first-child strong { display:inline-block; margin-right:8px; }
+.radar-table td small { display:block; margin-top:4px; color:var(--muted); font-size:.76rem; }
+.radar-table tr:last-child td { border-bottom:0; }
+.radar-table .best-row { background:rgba(232,249,243,.54); }
+.radar-table .current-row { background:rgba(239,237,255,.48); }
+.best-chip { display:inline-flex; padding:3px 7px; border-radius:999px; color:#176247; background:#dff7ed; font-size:.68rem; font-weight:850; text-transform:uppercase; }
+.positive-value { color:#087f65; font-weight:800; }
+.negative-value { color:#b04444; font-weight:800; }
+.radar-empty { padding:34px !important; text-align:center !important; color:var(--muted); }
+.radar-negotiation-card { display:grid; grid-template-columns:minmax(0,.75fr) minmax(420px,1.25fr); gap:30px; padding:30px; border:1px solid rgba(255,255,255,.84); border-radius:30px; background:linear-gradient(145deg,rgba(255,255,255,.68),rgba(241,247,255,.52)); box-shadow:var(--glass-shadow); backdrop-filter:blur(25px) saturate(150%); }
+.radar-negotiation-card h2 { margin:.35rem 0 .6rem; }
+.radar-negotiation-card p { color:var(--muted); }
+.radar-message-box { display:grid; gap:12px; }
+.radar-message-box textarea { min-height:174px; resize:vertical; line-height:1.55; }
+.radar-message-box .btn { justify-self:start; }
+.copy-feedback { min-height:1.2em; color:#087f65; font-weight:750; font-size:.86rem; }
+.official-rates-section { padding-top:4px; }
+.official-rates-heading { align-items:center; margin-bottom:22px; }
+.official-rates-heading h2 { margin:.35rem 0 .5rem; }
+.official-rates-heading p { max-width:720px; color:var(--muted); }
+.finansportalen-frame { overflow:hidden; border:1px solid rgba(255,255,255,.88); border-radius:30px; background:#fff; box-shadow:0 24px 70px rgba(37,53,88,.12),inset 0 1px 0 rgba(255,255,255,.95); }
+.finansportalen-frame iframe { display:block; background:#fff; }
+.source-note { margin:12px 4px 0; color:var(--muted); font-size:.84rem; }
+.radar-how .steps-grid article { min-height:190px; }
+
+@media (max-width:1100px) {
+  .radar-workspace { grid-template-columns:1fr; }
+  .radar-result { position:relative; top:auto; }
+  .offer-field-grid { grid-template-columns:1.35fr repeat(2,minmax(130px,1fr)); }
+}
+@media (max-width:760px) {
+  .radar-form-heading, .radar-offer-header, .official-rates-heading { display:grid; }
+  .radar-live-pill, .radar-add-offer, .official-rates-heading .btn { justify-self:start; }
+  .offer-field-grid { grid-template-columns:1fr 1fr; }
+  .offer-name-field { grid-column:1/-1; }
+  .radar-negotiation-card { grid-template-columns:1fr; padding:22px; }
+  .radar-stat-grid { grid-template-columns:1fr 1fr; }
+  .finansportalen-frame { margin-inline:-4px; border-radius:22px; }
+}
+@media (max-width:480px) {
+  .offer-field-grid, .radar-stat-grid { grid-template-columns:1fr; }
+  .radar-trust-row { display:grid; }
+  .radar-workspace { padding-inline:14px; }
+}

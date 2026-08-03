@@ -61,3 +61,14 @@ Alle er lagt til på forsiden, i søket, i Banken og i sitemap.xml.
 - `hjemmekontor-eller-kontor/` – Hjemmekontor eller kontor?
 
 Alle er koblet til forsiden, hovedsøket, Banken og sitemap.xml.
+
+
+## Rentesjekken
+
+- Ny side på `/rentesjekken/`.
+- Sammenligner dagens boliglån med opptil åtte tilbud.
+- Rangerer tilbud etter beregnet totalkostnad.
+- Viser måneds- og årsbesparelse, total besparelse, brytningspunkt og belåningsgrad.
+- Lager en ferdig melding som kan sendes til banken for å be om bedre rente.
+- Integrerer Finansportalens offisielle boliglånsoversikt som uendret iframe.
+- Lagt til i toppmeny, forside, hovedsøk, Banken og sitemap.

@@ -7,6 +7,7 @@
   const results = document.getElementById('bankResults');
 
   const pages = [
+    {title:"Rentesjekken",url:"../rentesjekken/",keys:["rentesjekken", "rentesammenligning", "sammenligne renter", "bankrente", "boliglånsrente", "bytte bank", "prute rente", "finansportalen"],desc:"Sammenlign dagens boliglån med konkrete banktilbud."},
     {title:"Ekstra nedbetaling eller sparing?",url:"../ekstra-nedbetaling-eller-sparing/",keys:["ekstra nedbetaling", "betale ned lån", "sparing", "fond", "høyrentekonto", "avdrag"],desc:"Sammenlign ekstra avdrag med langsiktig sparing."},
     {title:"Fastrente eller flytende rente?",url:"../fastrente-eller-flytende/",keys:["fastrente", "flytende rente", "rentevalg", "bindingstid", "boliglån"],desc:"Sammenlign fastrente med forventet flytende rente."},
     {title:"Refinansieringskalkulator",url:"../refinansiering/",keys:["refinansiering", "refinansiere", "bytte bank", "lavere rente", "samle lån"],desc:"Se besparelse og når byttekostnaden er tjent inn."},

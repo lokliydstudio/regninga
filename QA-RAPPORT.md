@@ -2,13 +2,13 @@
 
 Kontrollert 3. august 2026:
 
-- 53 HTML-filer totalt
-- 48 kalkulatorer/verktøy på forsiden
-- 25 nye kalkulatorer i denne leveransen
+- 54 HTML-filer totalt
+- 49 kalkulatorer/verktøy på forsiden
+- Rentesjekken lagt til på forsiden, i toppmenyen, hovedsøket, Banken og sitemap.xml
 - Ingen brutte lokale lenker eller manglende lokale ressurser
 - Ingen dupliserte HTML-ID-er
-- JavaScript-syntaks kontrollert for beregningsmotor, hovedsøk og Banken
-- Alle 25 nye kalkulatorer gir et ferdig resultat med standardverdiene
-- Alle nye sider finnes i forsiden, hovedsøket, Banken og sitemap.xml
+- JavaScript-syntaks kontrollert for alle JavaScript-filer
+- Standardberegningen i Rentesjekken kontrollert mot annuitetsformelen
+- Mobiltilpasning er definert med egne brytepunkter og tabellen kan rulles horisontalt
 
-Beregningene er planleggingsanslag basert på brukerens egne forutsetninger. Offentlige satser og skatteregler er ikke hardkodet.
+Rentesjekken beregner planleggingsanslag basert på brukerens egne forutsetninger. Finansportalens markedsoversikt er integrert som et separat, uendret iframe-verktøy. Ekstern lasting av iframe og annonser kunne ikke kjøres i den isolerte testserveren.

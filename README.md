@@ -20,8 +20,9 @@ Manuelle annonseenheter er aktivert i `assets/ads-config.js` med den oppgitte sl
 
 ## Innhold
 
-Nettstedet inneholder 23 innganger/verktøy, blant annet:
+Nettstedet inneholder 49 kalkulatorer/verktøy, blant annet:
 
+- `/rentesjekken/` – sammenlign eget boliglån med banktilbud
 - `/leie-eller-kjope/`, `/flytte-hjemmefra/` og `/gjeldsfri/`
 - `/buffer/`, `/abonnementssjekken/` og `/matbudsjett/`
 - `/ny-jobb/`, `/jobb-mindre/` og `/pensjon/`
@@ -42,7 +43,9 @@ Nettstedet inneholder 23 innganger/verktøy, blant annet:
 - `assets/app.js` – standardkalkulatorer
 - `assets/strom.js` – strømpris og strømkalkulatorer
 - `assets/pensjon.js` – pensjonsscenarioer
-- `assets/new-calculators.js` – beregninger for de 13 nyeste kalkulatorene
+- `assets/new-calculators.js` – beregninger for nyere kalkulatorer
+- `assets/more-calculators.js` – beregninger for valg- og planleggingskalkulatorer
+- `assets/rentesjekken.js` – rentesammenligning, rangering og forhandlingsmelding
 
 ## Felles design og funksjonalitet
 
@@ -76,3 +79,10 @@ Alle sider bruker den samme Liquid Glass-designprofilen i `assets/styles.css`. F
 - `/kredittkort-pris/` – Kredittkortets egentlige pris
 - `/lonnsokningens-verdi/` – Lønnsøkningens verdi
 - `/hjemmekontor-eller-kontor/` – Hjemmekontor eller kontor?
+
+
+## Rentesjekken
+
+`/rentesjekken/` kombinerer en lokal sammenligningsmotor med Finansportalens offisielle, integrerbare boliglånsoversikt. Besøkeren legger inn dagens lån og aktuelle banktilbud. Regninga beregner månedspris, total kostnad, mulig besparelse, brytningspunkt og en ferdig forhandlingsmelding.
+
+Rådata fra Finansportalen er ikke hentet direkte. Maskinell feed krever distribusjonsavtale og autentisering. Se `RENTESJEKKEN-DATA.md`.
