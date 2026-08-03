@@ -7,6 +7,31 @@
   const results = document.getElementById('bankResults');
 
   const pages = [
+    {title:"Ekstra nedbetaling eller sparing?",url:"../ekstra-nedbetaling-eller-sparing/",keys:["ekstra nedbetaling", "betale ned lån", "sparing", "fond", "høyrentekonto", "avdrag"],desc:"Sammenlign ekstra avdrag med langsiktig sparing."},
+    {title:"Fastrente eller flytende rente?",url:"../fastrente-eller-flytende/",keys:["fastrente", "flytende rente", "rentevalg", "bindingstid", "boliglån"],desc:"Sammenlign fastrente med forventet flytende rente."},
+    {title:"Refinansieringskalkulator",url:"../refinansiering/",keys:["refinansiering", "refinansiere", "bytte bank", "lavere rente", "samle lån"],desc:"Se besparelse og når byttekostnaden er tjent inn."},
+    {title:"Utleie av rom",url:"../utleie-av-rom/",keys:["utleie", "leie ut rom", "hybel", "husleieinntekt", "romutleie"],desc:"Se nettoinntekt fra å leie ut et rom."},
+    {title:"Studentbudsjett",url:"../studentbudsjett/",keys:["studentbudsjett", "student", "studielån", "stipend", "lån og stipend", "studentøkonomi"],desc:"Se dagsbudsjett, underskudd og nødvendig jobbinntekt."},
+    {title:"Frilans-timepris",url:"../frilans-timepris/",keys:["frilans", "timepris", "fakturere", "selvstendig", "konsulent", "freelance"],desc:"Finn en bærekraftig timepris som frilanser."},
+    {title:"Elbillading hjemme eller offentlig?",url:"../elbillading/",keys:["elbillading", "lade elbil", "hjemmelading", "hurtiglading", "ladeboks", "strøm bil"],desc:"Sammenlign hjemmelading, hurtiglading og ladeboks."},
+    {title:"Hyttekalkulator",url:"../hyttekalkulator/",keys:["hytte", "fritidsbolig", "hyttekostnad", "pris per natt", "hyttelån"],desc:"Se årskostnad, månedspris og pris per natt."},
+    {title:"Førerkortkalkulator",url:"../forerkort/",keys:["førerkort", "kjøretimer", "oppkjøring", "trafikkskole", "lappen"],desc:"Lag totalbudsjett og spareplan for førerkort."},
+    {title:"Alene etter samlivsbrudd",url:"../alene-etter-samlivsbrudd/",keys:["samlivsbrudd", "skilsmisse", "alene økonomi", "flytte fra partner", "ny husholdning"],desc:"Se månedsbudsjett og oppstartskostnader alene."},
+    {title:"Overtid eller fritid?",url:"../overtid-eller-fritid/",keys:["overtid", "fritid", "overtidsbetaling", "ekstra arbeid", "timeverdi"],desc:"Sammenlign netto overtidsbetaling med fritid."},
+    {title:"Ulønnet permisjon",url:"../ulonnet-permisjon/",keys:["ulønnet permisjon", "permisjon uten lønn", "fri fra jobb", "buffer permisjon"],desc:"Se nødvendig buffer og hvor lenge pengene varer."},
+    {title:"Rentestress",url:"../rentestress/",keys:["rentestress", "renteøkning", "boliglån rente", "høyere rente", "tåle rente"],desc:"Stresstest boliglånet med høyere rente."},
+    {title:"Kausjonist og medlåntaker",url:"../kausjonist-medlantaker/",keys:["kausjonist", "medlåntaker", "garanti", "ansvar lån", "hjelpe boligkjøp"],desc:"Synliggjør ansvar og mulig belastning ved kausjon."},
+    {title:"Solceller – nedbetalingstid",url:"../solceller/",keys:["solceller", "solcelleanlegg", "nedbetalingstid", "egen strøm", "solenergi"],desc:"Se nedbetalingstid og nettoverdi for solceller."},
+    {title:"Varmepumpe – lønner det seg?",url:"../varmepumpe/",keys:["varmepumpe", "oppvarming", "spare strøm", "nedbetalingstid varmepumpe"],desc:"Se årlig besparelse og nedbetalingstid."},
+    {title:"Flytting til en ny by",url:"../flytting-ny-by/",keys:["flytte ny by", "flytting", "levekostnader", "bytte by", "ny jobb by"],desc:"Sammenlign økonomien før og etter flytting."},
+    {title:"Babypakke – nytt eller brukt?",url:"../babypakke-nytt-eller-brukt/",keys:["babypakke", "babyutstyr", "brukt baby", "nytt eller brukt baby", "barnevogn"],desc:"Sammenlign ny og brukt babypakke etter videresalg."},
+    {title:"Dyr nummer to",url:"../dyr-nummer-to/",keys:["dyr nummer to", "hund nummer to", "katt nummer to", "ekstra kjæledyr", "to hunder"],desc:"Beregn merkostnaden ved et ekstra kjæledyr."},
+    {title:"Konfirmasjonsbudsjett",url:"../konfirmasjon/",keys:["konfirmasjon", "konfirmasjonsbudsjett", "fest", "konfirmant", "gjester"],desc:"Lag budsjett og spareplan for konfirmasjon."},
+    {title:"Julebudsjett",url:"../julebudsjett/",keys:["julebudsjett", "jul", "julegaver", "desember", "spare til jul"],desc:"Se total julekostnad og månedlig sparebehov."},
+    {title:"Kontantkjøp eller finansiering?",url:"../kontant-eller-finansiering/",keys:["kontantkjøp", "finansiering", "betale kontant", "billån", "delbetaling"],desc:"Sammenlign finansieringskostnad med mulig avkastning."},
+    {title:"Kredittkortets egentlige pris",url:"../kredittkort-pris/",keys:["kredittkort", "kredittkortgjeld", "minstebeløp", "kredittkortrente", "dyr gjeld"],desc:"Se tid, renter og effekten av høyere betaling."},
+    {title:"Lønnsøkningens verdi",url:"../lonnsokningens-verdi/",keys:["lønnsøkning", "høyere lønn", "lønnstilbud", "netto lønn", "lønn etter skatt"],desc:"Se netto verdi per måned, år og arbeidstime."},
+    {title:"Hjemmekontor eller kontor?",url:"../hjemmekontor-eller-kontor/",keys:["hjemmekontor", "kontor", "pendling hjemmekontor", "jobbe hjemme", "kontordag"],desc:"Sammenlign kostnad og tid hjemme mot kontoret."},
     {title:'Bufferkalkulator',url:'../buffer/',keys:['buffer','bufferkonto','nødsparing','økonomisk trygghet','uforutsette utgifter'],desc:'Finn et personlig mål for økonomisk buffer.'},
     {title:'Abonnementssjekken',url:'../abonnementssjekken/',keys:['abonnement','streaming','mobil','trening','apper','faste trekk'],desc:'Se månedspris, årspris og mulig besparelse.'},
     {title:'Matbudsjett',url:'../matbudsjett/',keys:['matbudsjett','mat','dagligvarer','takeaway','matsvinn','husholdning'],desc:'Samle dagligvarer og mat ute i ett budsjett.'},
@@ -54,7 +79,7 @@
   function showMessage(query, matches) {
     const text = matches.length
       ? `Her er ${matches.length === 1 ? 'kalkulatoren' : 'kalkulatorene'} som passer best til «${escapeHtml(query)}».`
-      : `Jeg fant ingen tydelig kalkulator for «${escapeHtml(query)}». Prøv et enklere søkeord, som bolig, bil, strøm, pensjon eller barn.`;
+      : `Jeg fant ingen tydelig kalkulator for «${escapeHtml(query)}». Prøv et enklere søkeord, som bolig, refinansiering, student, hytte, strøm eller jobb.`;
     messages.innerHTML = `<div class="bank-message bank-message-bot"><div class="bank-avatar">B</div><div><strong>Banken</strong><p>${text}</p></div></div>`;
   }
 

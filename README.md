@@ -47,3 +47,32 @@ Nettstedet inneholder 23 innganger/verktøy, blant annet:
 ## Felles design og funksjonalitet
 
 Alle sider bruker den samme Liquid Glass-designprofilen i `assets/styles.css`. Forsiden, hovedsøket, Banken og `sitemap.xml` inneholder alle kalkulatorene. Beregningene skjer lokalt i nettleseren.
+
+
+## Nye valg- og planleggingskalkulatorer
+
+- `/ekstra-nedbetaling-eller-sparing/` – Ekstra nedbetaling eller sparing?
+- `/fastrente-eller-flytende/` – Fastrente eller flytende rente?
+- `/refinansiering/` – Refinansieringskalkulator
+- `/utleie-av-rom/` – Utleie av rom
+- `/studentbudsjett/` – Studentbudsjett
+- `/frilans-timepris/` – Frilans-timepris
+- `/elbillading/` – Elbillading hjemme eller offentlig?
+- `/hyttekalkulator/` – Hyttekalkulator
+- `/forerkort/` – Førerkortkalkulator
+- `/alene-etter-samlivsbrudd/` – Alene etter samlivsbrudd
+- `/overtid-eller-fritid/` – Overtid eller fritid?
+- `/ulonnet-permisjon/` – Ulønnet permisjon
+- `/rentestress/` – Rentestress
+- `/kausjonist-medlantaker/` – Kausjonist og medlåntaker
+- `/solceller/` – Solceller – nedbetalingstid
+- `/varmepumpe/` – Varmepumpe – lønner det seg?
+- `/flytting-ny-by/` – Flytting til en ny by
+- `/babypakke-nytt-eller-brukt/` – Babypakke – nytt eller brukt?
+- `/dyr-nummer-to/` – Dyr nummer to
+- `/konfirmasjon/` – Konfirmasjonsbudsjett
+- `/julebudsjett/` – Julebudsjett
+- `/kontant-eller-finansiering/` – Kontantkjøp eller finansiering?
+- `/kredittkort-pris/` – Kredittkortets egentlige pris
+- `/lonnsokningens-verdi/` – Lønnsøkningens verdi
+- `/hjemmekontor-eller-kontor/` – Hjemmekontor eller kontor?
